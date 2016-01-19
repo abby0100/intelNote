@@ -1,0 +1,12 @@
+
+.bashrc
+
+alias ls='ls --color'
+alias ll='ls --l'
+alias la='ll --a'
+
+export http_proxy=http://proxy-shm.intel.com:911
+
+child-prc.intel.com: 913
+这个一个http的proxy
+你配置下你的浏览器，可以翻墙上google

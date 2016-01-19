@@ -1,0 +1,125 @@
+
+<!--Note: If you're using the Google Maps API for Work, you must use a client ID instead of an API key when loading the API. -->
+            <!--大陆 src="https://ditu.google.com/maps/api/js?key=AIzaSyB9bBaFWuTJ0eh06pTB9kHYnSRHQmf1S7Q&callback=initMap">-->
+            <!--美国 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9bBaFWuTJ0eh06pTB9kHYnSRHQmf1S7Q&callback=initMap">-->
+            <!--中国 src="http://maps.google.cn/maps/api/js?key=AIzaSyB9bBaFWuTJ0eh06pTB9kHYnSRHQmf1S7Q&callback=initMap&region=cn&language=zh-CN&signed_in=true"-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+            html, body { height: 400px; width: 600px; margin: 0; padding: 0; }
+            #map { height: 400px; width: 600px; }
+        </style>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9bBaFWuTJ0eh06pTB9kHYnSRHQmf1S7Q&callback=initMap&libraries=places">
+        </script>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <input id="searchTextField" type="text" size="50px" placeholder="Please Input Address">
+        </input>
+    </body>
+    <script type="text/javascript">
+        var map;
+
+        var intel = {lat: 31.020550, lng: 121.454658};
+        var ecnu = {lat: 31.028830, lng: 121.453030};
+        var sjtu = {lat: 31.023939, lng: 121.432945};
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+            center: intel,
+            zoom: 13,
+                scaleControl: false,
+                zoomControl: false,
+                mapTypeControl: false,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.DEFAULT,
+                    mapTypeIds: [
+                        google.maps.MapTypeId.ROADMAP,
+                        google.maps.MapTypeId.TERRAIN,
+                        google.maps.MapTypeId.SATELLITE
+                    ],
+                    position: google.maps.ControlPosition.LEFT_UP
+                },
+                streetViewControl: false,
+                rotateControl: false
+            });
+
+
+            var defaultBounds = new google.maps.LatLngBounds(
+                    new google.maps.LatLng(-33.8902, 151.1759),
+                    new google.maps.LatLng(-33.8474, 151.2631)
+            );
+            var input = document.getElementById('searchTextField');
+            var searchBox = new google.maps.places.SearchBox(input, {
+                bounds: defaultBounds
+            });
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+            var markerIntel = new google.maps.Marker({
+                map: map,
+                place: {
+                    location: intel,
+                    query: 'Google, intel, Shanghai, China'
+                },
+                attribution: {
+                    source: 'Google Maps JavaScript API',
+                    webUrl: 'https://developers.google.com/maps/'
+                }
+            });
+            var infoIntel = new google.maps.InfoWindow({
+                content: '<strong>Welcome to Intel!<br></strong>' +
+                'Temperature: 10℃<br>' +
+                'Humidity: 60%'
+            });
+             markerIntel.addListener('click', function(){
+                infoIntel.open(map,  markerIntel);
+            });
+
+            var markerECNU = new google.maps.Marker({
+                map: map,
+                place: {
+                    location: ecnu,
+                    query: 'Google, ecnu, Shanghai, China'
+                },
+                attribution: {
+                    source: 'Google Maps JavaScript API',
+                    webUrl: 'https://developers.google.com/maps/'
+                }
+            });
+            var infoECNU = new google.maps.InfoWindow({
+                content: '<strong>Welcome to ECNU!<br></strong>' +
+                'Temperature: 10℃<br>' +
+                'Humidity: 60%'
+            });
+             markerECNU.addListener('click', function(){
+                infoECNU.open(map,  markerECNU);
+            });
+
+            var markerSJTU = new google.maps.Marker({
+                map: map,
+                place: {
+                    location: sjtu,
+                    query: 'Google, SJTU, Shanghai, China'
+                },
+                attribution: {
+                    source: 'Google Maps JavaScript API',
+                    webUrl: 'https://developers.google.com/maps/'
+                }
+            });
+            var infoSJTU = new google.maps.InfoWindow({
+                content: '<strong>Welcome to SJTU!<br></strong>' +
+                'Temperature: 10℃<br>' +
+                'Humidity: 60%'
+            });
+             markerSJTU.addListener('click', function(){
+                infoSJTU.open(map,  markerSJTU);
+            });
+        }
+
+    </script>
+</html>

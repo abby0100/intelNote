@@ -1,0 +1,15 @@
+
+3.
+
+from web import form
+
+
+
+2. @app.route("/Authenticate")
+
+http://127.0.0.1:5000/Authenticate?UserName=Admin&Password=admin
+the 
+
+1. module and namespace
+
+use "import xxx.yyy" instead of "from xxx import yyy", the former has good namespace;

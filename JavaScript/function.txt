@@ -1,0 +1,30 @@
+
+
+【3】val() 和 html()
+
+	$("#ID")是JQuery中用来获得页面控件示例的语句，ID就是控件的ID名称。 对于以value属性来显示内容的控件，$("#ID").val()获取其显示内容，而其他情况则用$("#ID").html()
+
+
+
+【2】setTimeOut & setInterval
+
+	setInterval是设定时间后不停做
+
+		【不能保证准时，有可能时延】
+		http://www.jb51.net/article/49913.htm
+
+		【立即执行】
+		setInterval(
+			function(){ alert(); } (), 
+			delayTime);
+
+	setTimeOut 是设定时间后做一次
+
+
+【1】.toFixed(n)
+
+	【保留2位小数】
+	http://www.cnblogs.com/446557021/archive/2011/10/13/2211047.html
+	var windSpeed = ((data.query.results.channel.wind.speed) *  0.6213712).toFixed(2) + 'mph';
+
+

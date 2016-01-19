@@ -1,0 +1,57 @@
+
+1 【linux-ubuntu】
+
+ubuntu上安装mysql非常简单只需要几条命令就可以完成。
+http://blog.csdn.net/fighter_yy/article/details/40753889
+
+　　1. sudo apt-get install mysql-server
+ 
+　　2. apt-get isntall mysql-client
+ 
+　　3.  sudo apt-get install libmysqlclient-dev
+ 
+　　安装过程中会提示设置密码什么的，注意设置了不要忘了，安装完成之后可以使用如下命令来检查是否安装成功：
+ 
+　　sudo netstat -tap | grep mysql
+ 
+　　通过上述命令检查之后，如果看到有mysql 的socket处于 listen 状态则表示安装成功。
+ 
+　　登陆mysql数据库可以通过如下命令：
+ 
+　　mysql -u root -p 
+ 
+　　-u 表示选择登陆的用户名， -p 表示登陆的用户密码，上面命令输入之后会提示输入密码，此时输入密码就可以登录到mysql。
+
+
+2 【windows】
+
+错误一大堆
+http://fc-lamp.blog.163.com/blog/static/174566687201222560262/
+
+下载包
+http://xiazai.xiazaiba.com/Soft/M/MySQL_5.5.20_win32_XiaZaiBa.zip
+https://pypi.python.org/pypi/MySQL-python/1.2.5
+
+a. 下载MySQL
+b. 安装SetupTools
+c. 安装MySQL-Python
+	MySQL-Python也就是MySQLdb了。
+	MySQL_python-1.2.5
+		www.lfd.uci.edu/~gohlke/pythonlibs/#mysql-python
+
+		pip2.7 install MySQL_python-1.2.5-cp27-none-win_amd64.whl
+
+		import MySQLdb
+		[ok]
+
+
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    import MySQLdb
+  File "D:\PythonDev26\Lib\site-packages\MySQLdb\__init__.py", line 19, in <module>
+    import _mysql
+ImportError: DLL load failed: 找不到指定的模块。
+
+
+解决方法：把mysql安装目录的bin\libmySQL.dll文件复制到python安装目录的Lib\site-packages下 
+

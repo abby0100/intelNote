@@ -1,0 +1,10 @@
+
+
+¡¾1¡¿attr
+
+	jquery obtain div attr
+
+	alert($('#container').attr('id'));
+	$('#weather-icon').attr('title', iconText);
+	$('#weather-icon').attr('src', 'http://l.yimg.com/a/i/us/we/52/' + iconCode + '.gif');
+			

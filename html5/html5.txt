@@ -1,0 +1,54 @@
+
+
+【3】img的 alt vs title
+
+	http://www.jb51.net/article/13362.htm
+
+	alt	此属性的实质作用是图片在无法正确显示的时候起到文本替代的作用
+	title 	鼠标滑过时显示的文字提示
+
+
+
+
+【2】def with: 异步加载
+
+	【base.html】
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<div>
+    {% block info %}
+    {% endblock %}
+</div>
+
+	
+	【logout.html】
+{% extends "base.html" %}
+$def with (info)
+{% block head %}
+    <title>logout</title>
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/login_form.css">
+{% endblock %}
+{% block info %}
+    {% if info %}
+        <label>{{info}}</label>
+    {% endif %}
+{% endblock %}
+
+
+
+
+【1】label
+
+	<div></div> 等同于 
+	<label style="width: 150px;display: block">UserName</label>
+
+

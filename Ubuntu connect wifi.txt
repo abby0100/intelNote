@@ -1,0 +1,12 @@
+ubuntu下命令行连接wifi
+http://blog.csdn.net/gujing001/article/details/8309992
+  
+【台式机需要另外配置无线网卡，360随身wifi就可以】
+
+使用iwconfig命令：
+搜索无线网 iwlist wlan0 scan
+记下essid
+连接无密码的无线网 iwconfig wlan0 essid ChinaNet　其中ChinaNet是搜索到的无线网essid
+连接有密码的无线网 iwconfig wlan0 essid ChinaNet key xxxx　其中xxxx是密码
+启用无线网卡 ifconfig wlan0 up
+通过dhcp获取IP　dhclient wlan0　或 dhcpcd wlan0

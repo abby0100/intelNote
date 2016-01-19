@@ -1,0 +1,265 @@
+
+
+
+【8】weathercode and conditions
+	
+	WeatherCode	Condition	DayIcon	NightIcon
+395	Moderate or heavy snow in area with thunder	wsymbol_0012_heavy_snow_showers	wsymbol_0028_heavy_snow_showers_night
+392	Patchy light snow in area with thunder	wsymbol_0016_thundery_showers	wsymbol_0032_thundery_showers_night
+389	Moderate or heavy rain in area with thunder	wsymbol_0024_thunderstorms	wsymbol_0040_thunderstorms_night
+386	Patchy light rain in area with thunder	wsymbol_0016_thundery_showers	wsymbol_0032_thundery_showers_night
+377	Moderate or heavy showers of ice pellets	wsymbol_0021_cloudy_with_sleet	wsymbol_0037_cloudy_with_sleet_night
+374	Light showers of ice pellets	wsymbol_0013_sleet_showers	wsymbol_0029_sleet_showers_night
+371	Moderate or heavy snow showers	wsymbol_0012_heavy_snow_showers	wsymbol_0028_heavy_snow_showers_night
+368	Light snow showers	wsymbol_0011_light_snow_showers	wsymbol_0027_light_snow_showers_night
+365	Moderate or heavy sleet showers	wsymbol_0013_sleet_showers	wsymbol_0029_sleet_showers_night
+362	Light sleet showers	wsymbol_0013_sleet_showers	wsymbol_0029_sleet_showers_night
+359	Torrential rain shower	wsymbol_0018_cloudy_with_heavy_rain	wsymbol_0034_cloudy_with_heavy_rain_night
+356	Moderate or heavy rain shower	wsymbol_0010_heavy_rain_showers	wsymbol_0026_heavy_rain_showers_night
+353	Light rain shower	wsymbol_0009_light_rain_showers	wsymbol_0025_light_rain_showers_night
+350	Ice pellets	wsymbol_0021_cloudy_with_sleet	wsymbol_0037_cloudy_with_sleet_night
+338	Heavy snow	wsymbol_0020_cloudy_with_heavy_snow	wsymbol_0036_cloudy_with_heavy_snow_night
+335	Patchy heavy snow	wsymbol_0012_heavy_snow_showers	wsymbol_0028_heavy_snow_showers_night
+332	Moderate snow	wsymbol_0020_cloudy_with_heavy_snow	wsymbol_0036_cloudy_with_heavy_snow_night
+329	Patchy moderate snow	wsymbol_0020_cloudy_with_heavy_snow	wsymbol_0036_cloudy_with_heavy_snow_night
+326	Light snow	wsymbol_0011_light_snow_showers	wsymbol_0027_light_snow_showers_night
+323	Patchy light snow	wsymbol_0011_light_snow_showers	wsymbol_0027_light_snow_showers_night
+320	Moderate or heavy sleet	wsymbol_0019_cloudy_with_light_snow	wsymbol_0035_cloudy_with_light_snow_night
+317	Light sleet	wsymbol_0021_cloudy_with_sleet	wsymbol_0037_cloudy_with_sleet_night
+314	Moderate or Heavy freezing rain	wsymbol_0021_cloudy_with_sleet	wsymbol_0037_cloudy_with_sleet_night
+311	Light freezing rain	wsymbol_0021_cloudy_with_sleet	wsymbol_0037_cloudy_with_sleet_night
+308	Heavy rain	wsymbol_0018_cloudy_with_heavy_rain	wsymbol_0034_cloudy_with_heavy_rain_night
+305	Heavy rain at times	wsymbol_0010_heavy_rain_showers	wsymbol_0026_heavy_rain_showers_night
+302	Moderate rain	wsymbol_0018_cloudy_with_heavy_rain	wsymbol_0034_cloudy_with_heavy_rain_night
+299	Moderate rain at times	wsymbol_0010_heavy_rain_showers	wsymbol_0026_heavy_rain_showers_night
+296	Light rain	wsymbol_0017_cloudy_with_light_rain	wsymbol_0025_light_rain_showers_night
+293	Patchy light rain	wsymbol_0017_cloudy_with_light_rain	wsymbol_0033_cloudy_with_light_rain_night
+284	Heavy freezing drizzle	wsymbol_0021_cloudy_with_sleet	wsymbol_0037_cloudy_with_sleet_night
+281	Freezing drizzle	wsymbol_0021_cloudy_with_sleet	wsymbol_0037_cloudy_with_sleet_night
+266	Light drizzle	wsymbol_0017_cloudy_with_light_rain	wsymbol_0033_cloudy_with_light_rain_night
+263	Patchy light drizzle	wsymbol_0009_light_rain_showers	wsymbol_0025_light_rain_showers_night
+260	Freezing fog	wsymbol_0007_fog	wsymbol_0007_fog
+248	Fog	wsymbol_0007_fog	wsymbol_0007_fog
+230	Blizzard	wsymbol_0020_cloudy_with_heavy_snow	wsymbol_0036_cloudy_with_heavy_snow_night
+227	Blowing snow	wsymbol_0019_cloudy_with_light_snow	wsymbol_0035_cloudy_with_light_snow_night
+200	Thundery outbreaks in nearby	wsymbol_0016_thundery_showers	wsymbol_0032_thundery_showers_night
+185	Patchy freezing drizzle nearby	wsymbol_0021_cloudy_with_sleet	wsymbol_0037_cloudy_with_sleet_night
+182	Patchy sleet nearby	wsymbol_0021_cloudy_with_sleet	wsymbol_0037_cloudy_with_sleet_night
+179	Patchy snow nearby	wsymbol_0013_sleet_showers	wsymbol_0029_sleet_showers_night
+176	Patchy rain nearby	wsymbol_0009_light_rain_showers	wsymbol_0025_light_rain_showers_night
+143	Mist	wsymbol_0006_mist	wsymbol_0006_mist
+122	Overcast	wsymbol_0004_black_low_cloud	wsymbol_0004_black_low_cloud
+119	Cloudy	wsymbol_0003_white_cloud	wsymbol_0004_black_low_cloud
+116	Partly Cloudy	wsymbol_0002_sunny_intervals	wsymbol_0008_clear_sky_night
+113	Clear/Sunny	wsymbol_0001_sunny	wsymbol_0008_clear_sky_night
+
+
+
+
+【7】weather icons
+
+	【free, no license】
+	http://umutavci.deviantart.com/art/weather-icon-set-165476034
+	
+	【google icons】
+	https://design.google.com/icons/
+
+
+【6】flash getURL
+
+	http://jingyan.baidu.com/article/d5c4b52b33ef0cda570dc56c.html
+
+	getURL('api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=269cf46994ce8c1d59d37a50c5e479cd');
+
+
+
+【5】iframe
+
+	 <iframe src="http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=269cf46994ce8c1d59d37a50c5e479cd"></iframe>
+
+
+
+【4】openWeatherMap
+
+	account shaou247@gmail.com
+	key	269cf46994ce8c1d59d37a50c5e479cd
+	api	http://openweathermap.org/api
+
+	api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=269cf46994ce8c1d59d37a50c5e479cd
+
+#####################################################	
+
+{
+	"coord":{"lon":138.93,"lat":34.97},
+	"weather":
+		[{	"id":801,
+			"main":"Clouds",
+			"description":"few clouds",
+			"icon":"02d"}],
+	"base":"stations",
+	"main":
+		{	"temp":288.49,
+			"pressure":1014,
+			"humidity":51,
+			"temp_min":288.15,
+			"temp_max":289.26},
+	"visibility":10000,
+	"wind":{	"speed":2.1,
+			"deg":340},
+	"clouds":{"all":20},
+	"dt":1451971014,
+	"sys":{		"type":1,"id":7616,
+			"message":0.0089,
+			"country":"JP",
+			"sunrise":1451944359,
+			"sunset":1451979974},
+	"id":1851632,
+	"name":"Shuzenji",
+	"cod":200
+}
+
+
+    <script type="text/javascript">
+        var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=269cf46994ce8c1d59d37a50c5e479cd';
+        var data = {lat:'35',lon:'139',APPID:'269cf46994ce8c1d59d37a50c5e479cd'};
+        $.getJSON(weatherUrl, function(weatherJson) {
+            var index = 0;
+            alert(weatherJson.weather[0].main + ' ' + weatherJson.weather[0].icon + ' ' + weatherJson.name
+            + ' ' + weatherJson.main.temp + ' ' + weatherJson.main.humidity);
+        });
+        $('#test').html('hahah test');
+    </script>
+#####################################################
+   
+
+
+
+【3】google weather api
+
+	Google Maps API Powers Real-Time Weather For Weather Channel
+
+		http://www.programmableweb.com/news/google-maps-api-powers-real-time-weather-weather-channel/2015/07/20
+
+
+
+【2】yahoo weather
+	
+	https://developer.yahoo.com/weather/
+
+	create yahoo app account
+	api_key	dj0yJmk9dmF1WDVUMlZoaVJ6JmQ9WVdrOWFFRkVOVEJtTkRnbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03ZA--
+
+	%3D	=
+	%22	‘
+	%26	&
+	%27	'
+
+	【上海	okay】https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.placefinder%20where%20text=%2231,121%22&format=json
+	【阿根廷 error】https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.places(1)%20where%20text=%2231,121%22&format=json
+	
+	【u='c'】
+	http://stackoverflow.com/questions/21092164/yahoo-weather-api-celsius
+	<script type="text/javascript" src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.placefinder where text='31,121') and u='c'&format=json&callback=updateWeather"></script>
+	https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.placefinder where text='31,121')&format=json
+
+
+	【iot-weather】
+	<script type="text/javascript" src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.placefinder where text='31,121') and u='c'&format=json&callback=updateWeather"></script>
+
+	【good】shshaw
+	http://stackoverflow.com/questions/10715381/yahoo-yql-find-city-woeid-by-coordinates
+
+	It is somewhat ridiculous that Yahoo doesn't provide a lookup method for WOEIDs via lat/lon--it's been on their todo list since 2008--but that's the state of things.
+	Yahoo's PlaceMaker
+	先获取weoid,再获取天气
+
+		http://tutorialzine.com/2012/05/weather-forecast-geolocation-jquery/
+
+	
+	<script>
+	  var callbackFunction = function(data) {
+	    var wind = data.query.results.channel.wind;
+	    alert(wind.chill);
+	  };
+	</script>
+	
+	<script src="https://query.yahooapis.com/v1/public/yql?q=select wind from weather.forecast where woeid in (select woeid from geo.placefinder where text='31,121') and u=‘c’&format=json&callback=callbackFunction"></script>
+
+
+	【Yahoo Weather Condition Codes】
+
+		list
+			https://gist.github.com/bzerangue/805520
+		icons
+			http://l.yimg.com/a/i/us/we/52/11.gif	
+
+<?xml version="1.0" encoding="UTF-8"?>
+<yahoo-weather-codes>
+  <code number="0" description="tornado"/>
+  <code number="1" description="tropical storm"/>
+  <code number="2" description="hurricane"/>
+  <code number="3" description="severe thunderstorms"/>
+  <code number="4" description="thunderstorms"/>
+  <code number="5" description="mixed rain and snow"/>
+  <code number="6" description="mixed rain and sleet"/>
+  <code number="7" description="mixed snow and sleet"/>
+  <code number="8" description="freezing drizzle"/>
+  <code number="9" description="drizzle"/>
+  <code number="10" description="freezing rain"/>
+  <code number="11" description="showers"/>
+  <code number="12" description="showers"/>
+  <code number="13" description="snow flurries"/>
+  <code number="14" description="light snow showers"/>
+  <code number="15" description="blowing snow"/>
+  <code number="16" description="snow"/>
+  <code number="17" description="hail"/>
+  <code number="18" description="sleet"/>
+  <code number="19" description="dust"/>
+  <code number="20" description="foggy"/>
+  <code number="21" description="haze"/>
+  <code number="22" description="smoky"/>
+  <code number="23" description="blustery"/>
+  <code number="24" description="windy"/>
+  <code number="25" description="cold"/>
+  <code number="26" description="cloudy"/>
+  <code number="27" description="mostly cloudy (night)"/>
+  <code number="28" description="mostly cloudy (day)"/>
+  <code number="29" description="partly cloudy (night)"/>
+  <code number="30" description="partly cloudy (day)"/>
+  <code number="31" description="clear (night)"/>
+  <code number="32" description="sunny"/>
+  <code number="33" description="fair (night)"/>
+  <code number="34" description="fair (day)"/>
+  <code number="35" description="mixed rain and hail"/>
+  <code number="36" description="hot"/>
+  <code number="37" description="isolated thunderstorms"/>
+  <code number="38" description="scattered thunderstorms"/>
+  <code number="39" description="scattered thunderstorms"/>
+  <code number="40" description="scattered showers"/>
+  <code number="41" description="heavy snow"/>
+  <code number="42" description="scattered snow showers"/>
+  <code number="43" description="heavy snow"/>
+  <code number="44" description="partly cloudy"/>
+  <code number="45" description="thundershowers"/>
+  <code number="46" description="snow showers"/>
+  <code number="47" description="isolated thundershowers"/>
+  <code number="3200" description="not available"/>
+</yahoo-weather-codes>
+
+
+
+【1】api
+
+
+	Top 10 Weather APIs
+
+		http://www.programmableweb.com/news/top-10-weather-apis/analysis/2014/11/13
+
+	5 Weather Forecast API for developing apps 
+
+		http://superdevresources.com/weather-forecast-api-for-developing-apps/
+
+	Comparing Weather APIs
+	
+		http://michaelwelburn.com/2011/11/02/comparing-weather-apis/
+

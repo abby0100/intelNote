@@ -1,0 +1,9 @@
+
+[?2015/?12/?11 15:09] Shan, Theresa: 
+ctrl+alt+f2
+[?2015/?12/?11 15:09] Xiong, Yuan: 
+刚按了ctrl+alt+f6，也打开了
+
+http://zhidao.baidu.com/link?url=6iVMRhcVTu6PgqCO9qDJxGY8iXstXf_l7qC6iJCId3lajQT2h6c66VeEQLLp6XuA63CwHIWYiV2P4h8u9czy4oMJ6f4-F7WYQ9MripWOwTW
+
+命令行界面通组合键ctrl+alt+(F1-F6)切换同终端共6终端给切换

@@ -1,0 +1,147 @@
+
+
+【9】ip location
+
+	http://www.xuebuyuan.com/2082367.html
+
+	html5的geolocation
+		
+		http://www.cnblogs.com/zzcflying/archive/2012/08/30/2663540.html
+
+		PC端不可用，mobile没问题
+			
+			http://bbs.csdn.net/topics/390971006%3Fpage%3D1
+
+	google的geolocation
+
+		https://developers.google.com/maps/documentation/geolocation/intro
+
+
+【8】google map searchbox
+
+	place searches
+
+		https://developers.google.com/maps/documentation/javascript/examples/place-search
+
+	places search box
+	
+		https://developers.google.com/maps/documentation/javascript/examples/places-searchbox
+
+
+【7】marker
+
+	https://developers.google.com/maps/documentation/javascript/examples/place-search
+
+
+【6】初始化 google map
+
+	https://developers.google.com/maps/documentation/javascript/controls
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: {lat: -28.643387, lng: 153.612224},
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: google.maps.ControlPosition.TOP_CENTER
+    },
+    zoomControl: true,
+    zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_CENTER
+    },
+    scaleControl: true,
+    streetViewControl: true,
+    streetViewControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+    }
+  });
+}
+
+
+【5】经纬度和缩放级别
+
+	//var position = "33.8002084,-117.9209697";
+	//var lat = 33.8002084;
+	//var lon = -117.9209697;
+
+中国	33.0, 106.0		4
+华师	31.028830, 121.453030	18
+上交	31.023939, 121.432945	18
+intel	31.020550, 121.454658	18
+
+anaheim = {lat: 33.8002084, lng: -117.9209697};
+orangewood ave
+
+
+【4】google map key
+
+	project:	iot-map
+	route:		*.iot.com/*
+	key:		AIzaSyB60nUqSA8uk6KwDK6XENyDmKtiFPGxv1E
+
+	project:	新工程
+	route：		空
+	key:		AIzaSyB9bBaFWuTJ0eh06pTB9kHYnSRHQmf1S7Q
+	
+
+	OAuth
+	首页网址
+	http://www.iot-map.com/index.html
+	产品标识网址
+	http://www.iot-map.com/logo.png
+
+
+OAuth 用戶端
+這是您的用戶端 ID
+681893995188-0ps0d1unrlvms6bs2kj3ubdt7ftljmf0.apps.googleusercontent.com
+您的用戶端密鑰如下
+mgCyPnQ_MaM_QEOQTVWT7ofo
+
+
+
+
+【3】Google 地图 API | 菜鸟教程
+
+	http://www.runoob.com/googleapi/google-maps-api-key.html
+
+
+
+【2】steps
+
+	http://www.cnblogs.com/holly/archive/2011/05/10/2041773.html
+
+a 注册API秘钥
+
+在论坛里还有人问过，同一个页面需要支持不同的域名，最简单的就是公司有一个cn域名，也有一个com域名，这怎么办？
+
+其实，对于这种问题，可以提前先注册好不同域名对应的密钥，存在你的JS变量里面，页面加载时通过window.location得到当前请求页面的域名，通过这个域名在找到对应的密钥，然后使用script动态加载的方法加载地图API，用代码描述就是：
+//事先已经注册好的密钥
+var keyMapping = {host1:key1, host2:key2};
+
+	 <script src="http://ditu.google.com/maps?file=api&v=2&key=你注册的API密钥" type="text/javascript"></script>
+	只是在本地调试，可以不用密钥，随便用个字符串代替就可以了
+	说“基本”没有限制的原因是，谷歌对每个API密钥对应的网站所作的地理编码/地址解析请求次数有限制，每天（24小时）的请求次数不能超过15000次
+
+	var apiUrl = "http://ditu.google.com/maps?file=api&amp;v=2&amp;key=" + key;
+
+
+http://maps.google.com   这个应该是谷歌地图的全球主页，默认显示老美地图，拖拽到不同地区会对应显示不同语言版本的地图，不过目前对中文数据搜索支持的不如下面正式的中文主页；
+http://ditu.google.com   这个么，我叫它是谷歌地图的中文主页，什么意思看下一个你就知道了，用这个可以使用“我的地图”；
+http://ditu.google.cn   这个，我叫他是谷歌地图的大陆主页，目前还没有“我的地图”这个功能；
+
+
+
+【1】google map
+
+	proxy	child-prc.intel.com:913
+	url	https://www.google.com/intx/zh-CN/work/mapsearth/products/mapsapi.html
+	js api	https://developers.google.com/maps/documentation/javascript/tutorial
+		https://developers.google.com/maps/documentation/javascript/reference
+
+	get start
+	https://developers.google.com/maps/documentation/javascript/tutorial#MapOptions
+
+	api usage > 1000 will be charged
+
+	

@@ -1,0 +1,15 @@
+
+1
+
+df
+fdisk -l
+
+
+2 
+
+umount /media/xxx
+
+
+3
+
+sudo mkfs.vfat /dev/sdb -I

@@ -1,0 +1,10 @@
+
+
+【1】fopen vs open
+
+	http://blog.csdn.net/bloghome/article/details/3357696
+
+	一般用fopen打开普通文件，用open打开设备文件
+	前者无缓冲，后者有缓冲。
+
+

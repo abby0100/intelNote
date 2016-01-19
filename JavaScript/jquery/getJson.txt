@@ -1,0 +1,29 @@
+
+
+¡¾1¡¿getJSON
+
+	http://stackoverflow.com/questions/1740218/error-handling-in-getjson-calls
+
+$.getJSON() is a kind of abstraction of a regular ajax call where you would have to tell that you want a json encoded response.
+
+$.ajax({
+  url: url,
+  dataType: 'json',
+  data: data,
+  success: callback
+});
+You can handle errors in two ways: generically (by configuring your ajax calls before actually calling them) or specifically (with method chain).
+
+'generic' would be something like:
+
+$.ajaxSetup({
+      "error":function() { alert("error");  }
+});
+And the 'specific' way:
+
+$.getJSON("example.json", function() {
+  alert("success");
+})
+.success(function() { alert("second success"); })
+.error(function() { alert("error"); })
+.complete(function() { alert("complete"); });

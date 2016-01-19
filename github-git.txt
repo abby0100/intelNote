@@ -1,0 +1,58 @@
+
+
+
+6 git config
+
+	vim .git-credentials
+	https://{username}:{password}@github.com
+
+[filter "lfs"]
+        clean = git-lfs clean %f
+        smudge = git-lfs smudge %f
+        required = true
+[user]
+        name = abby0100
+[user]
+        email = yuan.xiong@intel.com
+[http]
+        proxy = http://child-prc.intel.com:913
+[https]
+        proxy = https://child-prc.intel.com:913
+[credential]
+        helper = store
+
+
+
+5 user.name, user.email
+
+	ssh
+	without input user.name and password
+	http://www.itnose.net/detail/6204668.html
+
+
+4 git bash 
+
+	错误fatal: could not create work tree dir 'smarthome-web-portal': Permission denied
+
+	知道原因了
+	运行git bash要用adminstrator权限
+
+
+3
+
+我安装了git，然后$ git clone https://github.com/otcshare/smarthome-web-portal
+fatal: could not create work tree dir 'smarthome-web-portal': Permission denied 
+
+
+
+2
+	
+	remember to set up your proxy for github
+
+1
+
+	GitHub for Windows安装失败解决
+	http://jingyan.baidu.com/album/fd8044fa924e8f5031137ac6.html
+
+	GitHub for Windows 客户端
+	https://github-windows.s3.amazonaws.com/ 

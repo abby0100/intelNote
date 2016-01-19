@@ -1,0 +1,19 @@
+
+IP Address
+
+router：
+10.239.131.163
+
+Edison：
+192.168.1.103
+
+
+
+
+
+
+1. 插上USB线
+
+2. 上电
+
+3. 打开putty、打开minicom

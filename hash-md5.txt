@@ -1,0 +1,68 @@
+
+
+4 md5 32->16
+
+	一般约定俗成的16位md5是32位md5的中间16位，也就是obj.hexdigest()[8:-8],以前像动网之类的系统为了省空间用的比较多
+	‘111111’ -->
+	96e79218965eb72c92a549dd5a330112
+		965eb72c92a549dd
+
+	‘iotos'-->
+	8bb00cf6a4afda5f44d243dcb0f0b209
+		a4afda5f44d243dc
+
+	python截取
+	[begin:end]
+		password_md5 = hashlib.md5(password).hexdigest()[8:-8]
+	mysql截取
+	substring(string, position, length)
+		INSERT INTO user_hash (username, password, gateway_id, created_at) VALUES ('root', substring(md5('iotos'), 9, 16), 1, now());
+
+
+3 password 加密方式
+
+	http://www.2cto.com/database/201104/86877.html
+
+
+2 hash md5
+
+>>> import hashlib
+>>> hashlib.new("md5","china").digest()
+'\x8a}{\xa2\x88\xca\x0f\x0e\xa1\xec\xf9u\xb0&\xe8\xe1'
+>>> hashlib.new("md5","china").hexdigest()
+'8a7d7ba288ca0f0ea1ecf975b026e8e1'
+>>> len(hashlib.new("md5","china").digest())
+ 16
+>>> len(hashlib.new("md5","china").hexdigest())
+ 32
+
+
+
+1 hash
+
+‘111111’
+96e79218965eb72c92a549dd5a330112
+96e79218965eb72c92a549dd5a330112
+
+AnMeiHong 2005-4-20 12:18
+呵呵，
+
+我来帮你们说说吧，，
+你们的“位”是不对的，，
+如果真是MD5的话，那出来的结果就是128位（BIT），
+
+转为16进制的话，，那么就是32“位”－－－－这里的位就是你们的位
+
+MD5没有你们说的什么16“位”的,
+除非是进行了进一步的处理，，但那样的话，也就不叫MD5了，那就是在MD5的基础上,它是进行了截取中间的16位，实际上，安全性降低了的，只是对于
+网站那点少得可怜的资料，
+是很难产生碰撞的，
+并且用16位也便于存储，
+比较吧，
+我想这也是只用16位的最主要的原因
+
+所以用16位肯定是降低了安全性，但不用怕。。。。。。。所以就用了
+
+MD5如果要求不规范点的说法的话，可以是加密＿＿＿＿＿当然是不可逆的的变换
+规范点的说法，应该叫散列才对，
+

@@ -1,0 +1,17 @@
+
+1. sudoers
+
+su root
+xxx
+
+cd /etc/sudoer.d/
+vim add-xy-to-sudoers
+
+ALL	ALL=(ALL:ALL)	ALL
+
+chmod 440 add-xy-to-sudoers
+chmod 440 ../sudoers
+
+su xy
+sudo vim a.a
+cat a.a

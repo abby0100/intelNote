@@ -1,0 +1,13 @@
+
+1 flask
+
+https://realpython.com/blog/python/using-flask-login-for-user-management-with-flask/ 
+
+2 flask http
+
+¡¾¾«¡¿http://dormousehole.readthedocs.org/en/latest/quickstart.html#quickstart
+
+3 flask api
+
+http://dormousehole.readthedocs.org/en/latest/api.html#flask.request
+

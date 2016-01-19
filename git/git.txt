@@ -1,0 +1,13 @@
+
+
+【2】reset
+
+	回退到某个版本
+	git reset --hard 3d10
+
+
+【1】author
+
+	查看某一个特定author的commit
+	git log --author abby0100
+

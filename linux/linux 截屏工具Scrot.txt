@@ -1,0 +1,10 @@
+Linux下命令行中可以用Scrot截屏，方法如下（以Ubuntu为例）：
+
+1.在Ubuntu系统上安装自带截图工具Scrot
+[root@localhost tools]#sudo apt-get install scrot
+2.截取整个桌面直接运行该命令
+[root@localhost tools]#scrot
+3.指定保存目标文件夹和截图文件名
+[root@localhost tools]#scrot ~/Pictures/my_desktop.png
+4.选择一个特定的窗口或定义一个矩形区域来截图
+[root@localhost tools]#scrot -s#运行这个命令后，继续鼠标单击任意窗口或画出一个矩形，它能够触发对选定窗口/区域的屏幕截取。

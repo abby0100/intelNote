@@ -1,0 +1,113 @@
+
+
+3 my mysql operation
+
+SHOW DATABASES;
+USE flask_test;
+SHOW TABLES ;
+DESC user;
+INSERT INTO user SET username='xy', password='sh';
+SELECT * FROM user;
+DELETE FROM user WHERE id=8;
+INSERT INTO user (id, username, password, gateway_id, created_at) VALUES (2, 'root', substring(md5('iotos'), 9, 16), 1, now());
+UPDATE user SET password='1c74a3ce39feab6041fc938e55a481e1' WHERE id=2;
+
+CREATE TABLE user_hash(
+  id INT(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(20),
+  password VARCHAR(32),
+  gateway_id INT(6),
+  created_at DATETIME
+);
+SELECT * FROM user_hash;
+DROP TABLE user_hash;
+INSERT INTO user_hash (username, password, gateway_id, created_at) VALUES ('root', substring(md5('iotos'), 9, 16), 1, now());
+SELECT * FROM user_hash;
+DELETE FROM user_hash WHERE id=6;
+
+
+
+2 mysql set
+
+	SHOW DATABASES;
+	USE flask_test;
+	SHOW TABLES ;
+	DESC user;
+	INSERT INTO user SET username='xy', password='sh';
+	SELECT * FROM user;
+	DELETE FROM user WHERE id=3;
+	INSERT INTO user (id, username, password, gateway_id, created_at) VALUES (3, 'xy', 'sh123', 1, now());
+
+	CREATE TABLE user_hash(
+	  id INT(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	  username VARCHAR(20),
+	  password VARCHAR(32),
+	  gateway_id INT(6),
+	  created_at DATETIME
+	);
+	SELECT * FROM user_hash;
+	DROP TABLE user_hash;
+	INSERT INTO user_hash (username, password, gateway_id, created_at) VALUES ('root', '8bb00cf6a4afda5f44d243dcb0f0b209', 1, now());
+	SELECT * FROM user_hash;
+
+
+	INSERT INTO users (name, age) VALUES('姚明',25);
+	INSERT INTO uses SET name = '姚明', age = 25;
+
+	UPDATE user SET password='sh123' WHERE id=2;
+	DELETE FROM user WHERE id=2;
+
+	INSERT INTO user (username, password, created_at) VALUES ('xy', 'sh123', now());
+
+	DELETE FROM user WHERE id=3;
+	INSERT INTO user (id, username, password, gateway_id, created_at) VALUES (2, 'xy', 'sh123', 1, now());
+
+
+1 MySQL：
+
+mysql查看表结构命令如下
+desc 表名；
+　　
+　　show columns from 表名；
+　　
+　　describe 表名；
+　　
+　　show create table 表名；
+　　
+　　use information_schema
+　　
+　　select * from columns where table_name=‘表名';
+　　
+　　顺便记下：
+　　
+　　show databases;
+　　
+　　use 数据库名；
+　　
+　　show tables;
+　　
+　　原有一unique索引AK_PAS_Name（PAC_Name）在表tb_webparamcounter中，
+　　
+　　执行以下sql修改索引
+　　
+　　alter table tb_webparamcounter drop index AK_PAS_Name;
+　　
+　　alter table tb_webparamcounter add UNIQUE AK_PAS_Name（PC_ID,PAC_Name）；
+　　
+　　若发现索引的逻辑不对，还需要再加一个字段进去，执行
+　　
+　　alter table tb_webparamcounter drop index AK_PAS_Name;
+　　
+　　alter table tb_webparamcounter add UNIQUE AK_PAS_Name（PC_ID,PAC_Name,PAC_Value）；
+　　
+　　注意：这时的PC_ID,PAC_Name,PAC_Value三个字段不是FOREIGN KEY
+　　
+　　否则必需先drop FOREIGN KEY,再重做上一步才行
+　　
+　　顺便提下oracle
+　　
+　　select * from v$database;
+　　
+　　select * from all_users;
+　　
+　　select * from user_tables;
