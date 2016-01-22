@@ -1,5 +1,27 @@
 
 
+
+
+¡¾11¡¿infoWindow
+
+	https://developers.google.com/maps/documentation/javascript/infowindows
+
+	overlay
+
+		http://artandlogic.com/2014/02/custom-google-maps-info-windows/
+
+
+
+¡¾10¡¿controls
+
+	google map controls push/clear
+	https://developers.google.com/maps/documentation/javascript/reference?csw=1#MVCArray
+	https://developers.google.com/maps/documentation/javascript/controls
+
+	map.controls[google.maps.ControlPosition.TOP_LEFT].clear();
+	map.controls[google.maps.ControlPosition.TOP_LEFT].push(infoTitle);
+
+
 ¡¾9¡¿ip location
 
 	http://www.xuebuyuan.com/2082367.html

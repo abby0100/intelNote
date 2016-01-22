@@ -1,5 +1,39 @@
 
 
+【3】branch merge
+
+	http://blog.jobbole.com/25877/
+
+	// create new branch
+	$ git branch infoWindow
+	Switched to branch 'infoWindow'
+	$ git branch
+	* infoWindow
+	  master
+
+	// do work
+	$ vim weather.js
+	$ git add weather.js
+	$ git commit -m 'xxx'
+	$ git log
+	Author: abby0100 <yuan.xiong@intel.com>
+	Date:   Fri Jan 22 11:14:40 2016 +0800
+
+	    Weather: hard coding yahoo weather woeid
+
+	// back to branch master
+	$ git checkout master
+	Switched to branch 'master'
+	Your branch is up-to-date with 'origin/master'.
+	$ git diff master infoWindow
+
+	// merge branch infoWindow to brance master
+	$ git merge infoWindow
+	$ git log
+	$ git pull
+	$ git push origin master
+
+
 【2】reset
 
 	回退到某个版本

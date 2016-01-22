@@ -1,0 +1,30 @@
+
+
+¡¾1¡¿search cross
+
+	1.search box cross on the right
+	http://www.zhangxinxu.com/wordpress/2014/03/css-input-clear-button-show-hide/
+	
+	<input id="searchTextField" class="search" type="search" placeholder=" Search property or account number"></input>
+
+
+	2.search cross margin-right
+	http://stackoverflow.com/questions/20804016/html-how-to-edit-the-x-button-that-apear-on-input-type-search
+
+	.search::-webkit-search-cancel-button {
+    		position: relative;
+    		right: 20px;
+	}
+
+	3.search placehold padding
+	http://stackoverflow.com/questions/8794821/firefox-input-placeholder-padding-issue
+	.search::-webkit-input-placeholder {
+	    	padding-left: 1%;
+	}
+
+	4.input text padding
+	.search {		
+	    	padding-left: 1.5%;
+	}
+
+	
