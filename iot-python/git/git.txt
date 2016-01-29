@@ -1,7 +1,13 @@
 
+【4】branch create and switch
+
+	git checkout -b newBranch
+
+
 
 【3】branch merge
 
+	使用new branch可以让你的工程文件夹名不变，而pycharm可以自动切换到某个branch
 	http://blog.jobbole.com/25877/
 
 	// create new branch

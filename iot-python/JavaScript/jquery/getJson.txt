@@ -1,4 +1,29 @@
 
+¡¾3¡¿check async status
+
+setTimeout(function checkStat() {
+	if ($weatherUpdated == 1) {
+		console.log('Weather: get yahoo weather forecast successfully.');
+		tryTimes = 5;
+		return;
+	} else {
+		console.error('Weather: ' + ' times failed to get yahoo weather forecast.');
+		if (tryTimes-- > 0) {
+			checkStat();
+		}
+	}
+}, 1000);
+
+
+¡¾2¡¿ajax
+
+$.ajax({
+  url: url,
+  dataType: 'json',
+  data: data,
+  success: callback
+});
+
 
 ¡¾1¡¿getJSON
 
@@ -12,6 +37,9 @@ $.ajax({
   data: data,
   success: callback
 });
+
+
+
 You can handle errors in two ways: generically (by configuring your ajax calls before actually calling them) or specifically (with method chain).
 
 'generic' would be something like:

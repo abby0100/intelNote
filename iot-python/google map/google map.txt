@@ -1,4 +1,9 @@
 
+¡¾12¡¿click
+
+	auto click google map marker
+	pop up infobox
+	http://stackoverflow.com/questions/6794405/trigger-google-maps-marker-click
 
 
 

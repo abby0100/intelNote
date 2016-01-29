@@ -1,0 +1,13 @@
+
+
+【1】js sequencely load
+
+	1.<script> will sequencely load and execute
+	http://www.15yan.com/story/a6fdSDK17In/
+
+	2.importScripts()
+
+	3.document.write scipts
+	a.js里调用b.js
+	在a.js中写document.write("<script src='b.js'></script>");
+	

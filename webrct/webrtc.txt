@@ -1,0 +1,43 @@
+
+
+
+【4】get start
+
+	To acquire and communicate streaming data, WebRTC implements the following APIs:
+
+	MediaStream: get access to data streams, such as from the user's camera and microphone.
+	RTCPeerConnection: audio or video calling, with facilities for encryption and bandwidth management.
+	RTCDataChannel: peer-to-peer communication of generic data.
+
+
+【3】cocoapods release
+
+	v2 API
+
+
+
+【2】getUserMedia
+	
+	only https, no http
+
+
+
+【1】webrtc
+
+	baidu
+		WebRTC，名称源自网页实时通信（Web Real-Time Communication）的缩写，是一个支持网页浏览器进行实时语音对话或视频对话的技术
+		WebRTC提供了视频会议的核心技术，包括音视频的采集、编解码、网络传输、显示等功能，并且还支持跨平台：windows，linux，mac，android。
+
+		http://baike.baidu.com/link?url=Xlbbh6UVj9dnl0lF3t4jQLUz8Mop5S6NTWPBwVZjzjHXNfzV37Kg2EtC7BxUuSUckJI7INfbZfvuBOSXy3gxaq
+
+	google
+		org site
+		https://webrtc.org/
+
+		bug report
+			bugs.webrtc.org/ 
+				issue 4081		
+			crbug.com/xxx
+		
+		discuss forum
+			https://groups.google.com/forum/#!forum/discuss-webrtc

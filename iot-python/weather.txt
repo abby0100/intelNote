@@ -1,4 +1,29 @@
 
+【9】yahoo weather YQL tables get woeid
+
+	1.Yahoo BOSS Geo Services
+	https://developer.yahoo.com/boss/geo/#pricing
+
+	2.Free Non-Commercial YQL Table Usage
+	https://developer.yahoo.com/boss/geo/docs/free_YQL.html#table_pf
+
+	3.YQL table
+	http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20geo.places%20WHERE%20text%3D%2234%2C%20-118%22%20AND%20placeTypeName.code%20%3D%207&format=json&diagnostics=true
+
+	4.get woeid and lat/lon
+	【shanghai】
+	http://where.yahooapis.com/v1/places.q('31.24,121.10')?appid=dj0yJmk9dmF1WDVUMlZoaVJ6JmQ9WVdrOWFFRkVOVEJtTkRnbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03ZA--
+	【hangzhou】
+	http://where.yahooapis.com/v1/places.q('Place%20hangzhou')?appid=[dj0yJmk9dmF1WDVUMlZoaVJ6JmQ9WVdrOWFFRkVOVEJtTkRnbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03ZA--]&format=json
+	【zhejiang shaoxing】
+	http://where.yahooapis.com/v1/places.q('Place%20zhejiang%20shaoxing')?appid=[dj0yJmk9dmF1WDVUMlZoaVJ6JmQ9WVdrOWFFRkVOVEJtTkRnbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03ZA--]
+
+http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.placefinder%20where%20text=%2231,121%22AND%20placeTypeName.code%20%3D%207&format=json
+
+https://query.yahooapis.com/v1/public/yql?q=select * from geo.places where woeid in (select place.woeid from flickr.places where (lat, lon) in (34,-118))&api_key=dj0yJmk9dmF1WDVUMlZoaVJ6JmQ9WVdrOWFFRkVOVEJtTkRnbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03ZA--&format=json&diagnostics=true
+	
+
+
 【2】yahoo weather
 	
 	https://developer.yahoo.com/weather/
@@ -12,6 +37,8 @@
 	%27	'
 
 	【上海	okay】https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.placefinder%20where%20text=%2231,121%22&format=json
+	【上海	okay】https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.placefinder%20where%20text=%2231,121%22&gflags="R"&format=json
+	【上海	okay】https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.placefinder%20where%20text=%2231,121%22&format=json&api_key=dj0yJmk9dmF1WDVUMlZoaVJ6JmQ9WVdrOWFFRkVOVEJtTkRnbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD03ZA--
 	【阿根廷 error】https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.places(1)%20where%20text=%2231,121%22&format=json
 	
 	【u='c'】

@@ -1,0 +1,10 @@
+
+
+¡¾1¡¿flow
+	
+	celeryconfig.py	
+		-->celeryapp.py	
+			-->celery_schedule.py
+				-->tasks.py
+					-->get_resource()	-->ResourceManager	
+					--get_sensor_data()	-->S

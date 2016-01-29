@@ -1,0 +1,39 @@
+
+Hi, Xiong Yuan,
+
+As we had sync-up last day /w F2F, and since you will back to site after Ww09.3, here is roadmap for you.
+Ww05£­Ww09.3 CNY-Holiday, self-learning  & reading from refer website, Machine Env.
+Ww09.4£­Ww10.3 Build-up Google upstream P2P Server, get to know the pipeline and calling sequence.
+Ww10.4£­Ww10.5 Build-up Google upstream P2P Web-Client (JS based sample), get to know the pipeline and verify your server works well.
+Ww11.1£­Ww11.5 Build-up Google upstream P2P Native-Client (Java based sample), get to know the Native API with your P2P server.
+Ww12.1£­Ww12.5 Build-up Google upstream Conference Server (Java based sample), get to know the Conference API and refine P2P issues if any met.
+Ww13.1£­Ww13.5 Build-up Google upstream Conference Web-Client (JS based sample), get to know the Conference API and pipeline.
+Ww14.1£­Ww14.2 Go-through all you had warm£­up with Google Opensource WebRTC P2P/Conf Svr+Client samples with IRES team.
+Ww14.3£­Ww14.5 Compare / construct Open source WebRTC API and Intel WebRTC API with call/message pipeline full stacks.
+Ww15.1£­Ww15.5 Try to build£­in Open source API into IRES project with team.
+Ww16.1£­Ww16.5 Half£­week backtoSchool for personal affairs, keep work with team for integration build-in.
+Ww17 Milestone and refine all build-in task, debuging.
+Ww18  TBD (Buffer for any delay in previous task)
+=======================================================
+
+
+Please find reference docs/code from below:
+https://webrtc.org/
+https://webrtc.org/native-code/
+https://webrtc.org/web-apis/
+
+http://www.html5rocks.com/en/tutorials/webrtc/basics/
+
+Samples / App:
+https://webrtc.github.io/samples/
+https://webrtc.org/reference-apps/
+
+http://otcqa.sh.intel.com/wiki/Media/WebAPI/WebRTC
+https://wiki.ith.intel.com/display/webrtc/Intel+Collaboration+Suite+for+WebRTC;jsessionid=04C0ABC1B2ABC09B33F8AA35B545E314
+https://wiki.ith.intel.com/display/PnP/WebRTC_performance_pnp
+
+Have a good holiday~ any unclear, reach me by WeChat in holiday.
+
+Regards
+Qing
+
