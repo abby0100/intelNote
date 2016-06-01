@@ -1,5 +1,26 @@
 
 
+2 [ok] x86 apprtcdemo
+
+
+Project Member Comment 8 by yujie.mao@webrtc.org, Jun 26, 2014
+Owner: yujie.mao@webrtc.org
+Status: Assigned
+
+Please try
+
+//$ GYP_DEFINES="$GYP_DEFINES OS=android target_arch=x64"
+$ GYP_DEFINES="$GYP_DEFINES OS=android target_arch=ia32"
+$ gclient runhooks
+$ ninja -C out/Debug XXX
+
+If you still can't work, please contact me.
+
+@braveyao: I'll assign this bug to myself.
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ¡¾4¡¿get start
 

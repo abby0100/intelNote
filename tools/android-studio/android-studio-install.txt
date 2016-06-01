@@ -1,0 +1,7 @@
+
+[1] Rendering problems
+
+	This version of the rendering library is more recent than your version of Android Studio. Please update Android Studio
+	http://www.hankcs.com/program/mobiledev/idea-this-version-of-the-rendering-library-is-more-recent-than-your-version-of-intellij-idea-please-update-intellij-idea.html
+
+
