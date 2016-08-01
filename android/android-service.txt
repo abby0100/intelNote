@@ -1,0 +1,6 @@
+
+[1]	android service bind
+
+	http://www.cnblogs.com/mengdd/archive/2013/03/24/2979710.html
+
+

@@ -1,0 +1,49 @@
+
+www.cnblogs.com/0616--ataozhijia/p/3644482.html
+
+
+#新建old_master分支做备份  
+git branch old_master  
+#push到远程  
+git push origin old_master:old_master  
+#本地仓库回退到某个版本  
+git reset –hard bae168  
+#删除远程的master分支  
+git push origin :master  
+#重新创建master分支  
+git push origin master  
+
+复制代码
+
+在删除远程master分支时，可能会有问题，见下：
+
+ 
+复制代码
+
+$ git push origin :master  
+error: By default, deleting the current branch is denied, because the next  
+error: 'git clone' won't result in any file checked out, causing confusion.  
+error:  
+error: You can set 'receive.denyDeleteCurrent' configuration variable to  
+error: 'warn' or 'ignore' in the remote repository to allow deleting the  
+error: current branch, with or without a warning message.  
+error:  
+error: To squelch this message, you can set it to 'refuse'.  
+error: refusing to delete the current branch: refs/heads/master  
+To git@xx.sohu.com:gitosis_test  
+ ! [remote rejected] master (deletion of the current branch prohibited)  
+error: failed to push some refs to 'git@xx.sohu.com:gitosis_test'  
+
+复制代码
+
+ 
+
+这时需要在远程仓库目录下，设置git的receive.denyDeleteCurrent参数
+
+git receive.denyDeleteCurrent warn  
+
+然后，就可以删除远程的master分支了
+
+虽然说有以上2种方法可以回退远程分支的版本，但这2种方式，都挺危险的，需要谨慎操作……
+
+

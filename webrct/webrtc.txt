@@ -1,5 +1,31 @@
 
 
+3 conf calling flow
+
+
+	inviter: (broadcast: intent)
+
+	1. PrepareRoomAction
+	InviteContactAction
+		inviteUser
+
+	2. JoinConferenceRoomAction
+	PublishStreamAction
+	SubscribeMixAudioAction
+	GetUsersAction
+		subscribeVideo
+
+	invitee:
+	
+	1. AnswerInviteAction
+
+	2. JoinConferenceRoomAction
+	PublishStreamAction
+	SubscribeMixAudioAction
+	GetUsersAction
+		subscribeVideo
+	
+
 2 [ok] x86 apprtcdemo
 
 
