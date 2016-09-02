@@ -1,0 +1,4 @@
+
+[1] Google developer blog
+	http://android-developers.blogspot.com/2011/09/androids-http-clients.html
+

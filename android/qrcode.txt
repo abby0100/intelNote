@@ -1,0 +1,5 @@
+
+
+[1] Android 二维码 生成和识别（附Demo源码）
+	http://www.cnblogs.com/weixing/archive/2013/08/28/3287120.html
+
