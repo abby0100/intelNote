@@ -1,0 +1,4 @@
+
+[1] Java中用HttpsURLConnection访问Https链接的问题
+	http://www.68idc.cn/help/buildlang/java/20150729465845.html
+

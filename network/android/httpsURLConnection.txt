@@ -1,0 +1,68 @@
+
+[1] https url connection
+	https://developer.android.com/trainning/articles/security-ssl.html#CommonProblems
+
+// Setting for HTTPS connection
+        TrustManager[] trustManagers = new TrustManager[] {new X509TrustManager() {
+            @Override
+            public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                Log.d(Log.NS, "HTTPS checkClientTrusted");
+            }
+
+            @Override
+            public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                Log.d(Log.NS, "HTTPS checkServerTrusted");
+            }
+
+            @Override
+            public X509Certificate[] getAcceptedIssuers() {
+                Log.d(Log.NS, "HTTPS getAcceptedIssuers");
+                return null;
+            }
+        }};
+        HttpsURLConnection.setDefaultHostnameVerifier(new NullHostNameVerifier());
+        SSLContext sslContext = SSLContext.getInstance("TLS");
+        sslContext.init(null, trustManagers, new SecureRandom());
+        HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
+
+
+        // HTTP connection
+        URL url = new URL(action.url);
+        Log.d(Log.NS, "execute", "action: " + action.name());
+        HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+        connection.setRequestProperty("Authorization", header.toString());
+        connection.setRequestProperty("Content-Type", "application/json");
+        connection.setRequestProperty("WWW-Authenticate", "Authorization");
+        connection.setRequestMethod(action.method == Request.Method.POST ? "POST" : "GET");
+        if (action.method == Request.Method.POST) {
+            connection.setDoOutput(true);
+            connection.setUseCaches(false);
+        }
+        connection.setConnectTimeout(Utils.NET_HTTP_REQUEST_TIMEOUT);
+        connection.connect();
+
+        if (action.body != null) {
+            DataOutputStream outStream = new DataOutputStream(connection.getOutputStream());
+            outStream.writeBytes(action.body.toString());
+            outStream.flush();
+            outStream.close();
+        }
+
+        // result notification
+        final int responceCode = connection.getResponseCode();
+        Log.d(Log.NS, "execute", "reaponse code : " + responceCode);
+        switch (responceCode) {
+        case 200:
+            // get response message data
+            String successResult = "";
+            String lineString = "";
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(connection.getInputStream(), "UTF-8"));
+            while ((lineString = reader.readLine()) != null) {
+                successResult = successResult + lineString;
+            }
+            reader.close();
+	}
+	connection.disconnect();
+
+

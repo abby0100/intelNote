@@ -1,0 +1,4 @@
+
+[1] SSL/TLS
+	http://kb.cnblogs.com/page/197396/
+
