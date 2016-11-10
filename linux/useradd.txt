@@ -1,0 +1,10 @@
+
+
+[Right way]
+	root@yw-desktop:/home# useradd -r -m -s /bin/bash yuanwei  
+
+[Wrong way]
+	Ubuntu 添加新用户并制定目录和shell，并配置为root组用户|sudoer 修改 
+	http://blog.csdn.net/gujing001/article/details/9625069
+
+

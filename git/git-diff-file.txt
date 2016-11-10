@@ -1,0 +1,14 @@
+
+
+git log --pretty=oneline app/src/main/java/com/intel/ires/LoginActivity.java
+
+	2554532a793e579c4e4280d8964dfc80c9ef53d9 Wi-Fi util: add wifi util to scan wifi qr code	
+	d66e49483df848c64fa65a34a78be03ecaffdcef Conference: Add preview function in streaming mode in static room
+	6357b9193a76aa73275ca18cb8647c455f48aa1c Get room list from server
+	cb52371662db31c7c1ed0c38ed9db8fe2e4dd0e0 Create git repository for IRES_vuzix
+
+git show 2554532a793e579c4e4280d8964dfc80c9ef53d9 app/src/main/java/com/intel/ires/LoginActivity.java
+
+
+git log -p app/src/main/java/com/intel/ires/LoginActivity.java
+

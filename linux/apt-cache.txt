@@ -1,0 +1,3 @@
+
+ sudo apt-cache search openjdk --names-only 
+

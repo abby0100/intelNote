@@ -1,0 +1,4 @@
+
+[1] http server
+	python -m SimpleHTTPServer 6000
+

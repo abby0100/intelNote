@@ -1,0 +1,4 @@
+
+ubuntu 14.04 設定hostname 
+	http://blog.csdn.net/ichsonx/article/details/39956741
+
