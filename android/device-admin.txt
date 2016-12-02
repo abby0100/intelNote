@@ -1,0 +1,4 @@
+
+[1] Device Administration
+	http://www.android-doc.com/guide/topics/admin/device-admin.html
+

@@ -1,0 +1,14 @@
+
+[1] Remove system Camera2.apk
+
+	/system/app/Camera2.apk
+	
+	adb pull /system/app/Camera2.apk <PATH-TO-SAVE>
+	
+		/system/lib/libjni_jpegutil.so
+		/system/lib/libjni_tinyplanet.so
+		/system/app/Camera2.apk
+
+	adb shell su -c mount rw,remount /system
+	adb shell su -c rm /system/app/Camera2.apk
+	

@@ -1,0 +1,5 @@
+
+[1] Application publishing
+
+	https://developer.android.com/studio/publish/preparing.html
+

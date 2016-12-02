@@ -1,0 +1,12 @@
+
+
+
+[2] dex2jar Download
+
+	https://sourceforge.net/projects/dex2jar/?source=typ_redirect
+
+[1] apktool download
+
+	https://ibotpeaches.github.io/Apktool/
+
+
