@@ -1,0 +1,6 @@
+
+[1] Code comment
+
+	File->Settings，搜索keymap，点开Keymap，在右边面板上搜索，找到Other->Fix doc comment
+
+

@@ -1,0 +1,14 @@
+
+
+[2] Official document
+
+	https://developer.android.com/studio/build/shrink-code.html
+
+[1] Application proguard
+
+	[goood]
+	http://stackoverflow.com/questions/23149417/proguard-project-txt-not-found-in-android-studio
+	http://blog.csdn.net/fengyuzhengfan/article/details/43876489
+
+	http://blog.csdn.net/lincyang/article/details/44037845
+

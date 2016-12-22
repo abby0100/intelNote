@@ -1,0 +1,9 @@
+
+[1] Uiautomator
+	
+	[good]
+	Python + android + uiautomator
+
+	http://blog.csdn.net/temanm/article/details/49366485
+
+

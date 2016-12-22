@@ -1,0 +1,5 @@
+
+[1] android studio build java library jar
+
+	http://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project
+

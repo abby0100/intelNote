@@ -1,4 +1,9 @@
 
+[2] Adb shell [goood]
+
+	http://adbshell.com/commands/adb-shell-setprop
+
+
 [1] Adb commands (good)
 
 	http://blog.chinaunix.net/uid-26997997-id-3350449.html

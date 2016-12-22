@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/QAPage"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>java - How to make a .jar out from an Android Studio project - Stack Overflow</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a%29">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="How to make a .jar out from an Android Studio project">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I'm using AndroidStudio and I have this project as shown:
+What is inside the blue circle is myLib. myLib also needs to use an external lib that is inside the red circle, and an apache package (green ">
+    <meta property="og:url" content="http://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project">
+    <link rel="canonical" href="http://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project">
+
+    
+    
+    <script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/ados.html" async="" type="text/javascript"></script><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/quant.js" async=""></script><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/beacon.js" async=""></script><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/analytics.js" async=""></script><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/ados.js" async="" type="text/javascript"></script><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/jquery.js"></script>
+    <script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question 'How to make a .jar out from an Android Studio project'" href="http://stackoverflow.com/feeds/question/21712714">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:4,shownCommentCount:4,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:21712714});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '21712714');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+            });
+        </script>
+
+            <script>
+                StackExchange.ready(function () {
+                    try {
+                        if (!document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGTransform)
+                            return;
+                    } catch (ex) {
+                        return;
+                    }
+                    var d = 100;
+                    $.ajax({url:"//cdn-prom.sstatic.net/WinterBash/js/qa-wb.js?v=8",cache:true,dataType:"script"}).done(function tryInit() {
+                        if (window.WinterBash) {
+                            WinterBash.core.init('winterbash2016.stackexchange.com', '//cdn-prom.sstatic.net/WinterBash/', '8');
+                        } else {
+                            if (d <= 800)
+                                setTimeout(tryInit, d);
+                            d *= 2;
+                        }
+                    });
+                });
+            </script>
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1482376565,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"e298dfa870940e69c7aacb2943640963","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"ab":{"question_page_hero":{"v":"delay_hero","g":2},"devstory_onboarding_exp":{"v":"g","g":1},"mobile_signup_link":{"v":"simplified_signup_form:rdn","g":1}}},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableNewHeaderDesign":true,"enableImgurHttps":true},"comments":{},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"analytics":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"0c55e59bee3c","js/moderator.en.js":"9d88a6d486e9","js/full-anon.en.js":"73d95c32e3c3","js/full.en.js":"a2d2aedcfa97","js/wmd.en.js":"37d3491a2854","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"20710353f000","js/help.en.js":"87013f0c3a25","js/tageditor.en.js":"516f9ad24571","js/tageditornew.en.js":"c2a2fd821d71","js/inline-tag-editing.en.js":"77dde44800e2","js/revisions.en.js":"8f22ba768cac","js/review.en.js":"6cf82d1a3352","js/tagsuggestions.en.js":"78eee7c19ab2","js/post-validation.en.js":"2d1f822fece2","js/explore-qlist.en.js":"d33e3ab2f2e0","js/events.en.js":"e0665abd6a8f","js/keyboard-shortcuts.en.js":"792df74027be","js/external-editor.en.js":"9d2dbfbb087d","js/external-editor.en.js":"9d2dbfbb087d","js/snippet-javascript.en.js":"bb9cbf50086e","js/snippet-javascript-codemirror.en.js":"2c5cbd21592f"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/full-anon.js" async=""></script><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/snippet-javascript.js" async=""></script><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/post-validation.js" async=""></script><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/prettify-full.js" async=""></script><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/external-editor.js" async=""></script><link rel="stylesheet" type="text/css" href="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/wb-include.css"></head>
+<body class="question-page new-topbar">
+    <noscript><div id="noscript-padding"></div></noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f21712714%2fhow-to-make-a-jar-out-from-an-android-studio-project" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="http://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+        </div>
+
+        <div class="network-items">
+                <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 162 Stack Exchange sites">
+                    <span class="hidden-text">Stack Exchange</span>
+                </a>
+
+    <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link" rel="nofollow">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f21712714%2fhow-to-make-a-jar-out-from-an-android-studio-project" class="login-link" rel="nofollow">log in</a>
+
+                            <a href="http://stackoverflow.com/tour">tour</a>
+        <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+            help
+            <span class="triangle"></span>
+        </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+                                            </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                        <input name="q" placeholder="Search Q&amp;A" tabindex="1" autocomplete="off" maxlength="240" type="text">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                            <li class="youarehere">
+        <a id="nav-questions" href="http://stackoverflow.com/questions" class="js-gps-track" data-gps-track="top_nav.click({is_current:true, location:3, destination:1})">
+        Questions
+        </a>
+    </li>
+
+    <li>
+        <a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:6})">
+        Jobs
+        </a>
+    </li>
+                            <li>
+        <a id="nav-docs" href="http://stackoverflow.com/documentation" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:7})">
+        Documentation
+        </a>
+    </li>
+                            <li>
+        <a id="nav-tags" href="http://stackoverflow.com/tags" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:2})">
+        Tags
+        </a>
+    </li>
+
+                            <li>
+        <a id="nav-users" href="http://stackoverflow.com/users" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:3})">
+        Users
+        </a>
+    </li>
+
+                            <li>
+        <a id="nav-badges" href="http://stackoverflow.com/help/badges" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:4})">
+        Badges
+        </a>
+    </li>
+
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+    <div id="herobox" class="alternate">
+        <div class="test"></div>
+            <div id="close">
+                <a title="click to minimize"><span>x</span> Dismiss</a>
+            </div>
+        <div class="content">
+            <b>Join the Stack Overflow Community</b>
+            <div class="separator"></div>
+            <div class="blurb">
+                Stack Overflow is a community of 6.5 million programmers, just like you, helping each other.
+                    <br>
+Join them; it only takes a minute:                    <br>
+            </div>
+            <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f21712714%2fhow-to-make-a-jar-out-from-an-android-studio-project" id="tell-me-more" class="button">Sign up</a>
+        </div>
+    </div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project" class="question-hyperlink">How to make a .jar out from an Android Studio project</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="21712714" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk876520753",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk876520753"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="21712714" type="hidden">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">50</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="#">favorite</a>
+        <div class="favoritecount"><b>28</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I'm using AndroidStudio and I have this project as shown:</p>
+
+<p><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/hVB5A.jpg" alt="enter image description here"></p>
+
+<p>What is inside the blue circle is myLib. myLib also needs to use an 
+external lib that is inside the red circle, and an apache package (green
+ circle). </p>
+
+<p>So I want to make this whole thing become a single .jar, so I can use it in another projects.</p>
+
+<p>A step-by-step guide would be really appreciated, I'm a beginner in the developer world.</p>
+
+<p>Thanks!</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag js-gps-track" title="show questions tagged 'java'" rel="tag">java</a> <a href="http://stackoverflow.com/questions/tagged/android" class="post-tag js-gps-track" title="show questions tagged 'android'" rel="tag"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/tKsDb.png" alt="" class="sponsor-tag-img" height="16" width="18">android</a> <a href="http://stackoverflow.com/questions/tagged/jar" class="post-tag js-gps-track" title="show questions tagged 'jar'" rel="tag">jar</a> <a href="http://stackoverflow.com/questions/tagged/android-studio" class="post-tag js-gps-track" title="show questions tagged 'android-studio'" rel="tag"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/xqoqk.png" alt="" class="sponsor-tag-img" height="16" width="18">android-studio</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/21712714" title="short permalink to this question" class="short-link" id="link-post-21712714">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/21712714/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td class="post-signature" align="right">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/21712714/revisions" title="show all edits to this post">edited <span title="2014-02-11 20:51:08Z" class="relativetime">Feb 11 '14 at 20:51</span></a>
+    </div>
+    <div class="user-gravatar32 wb-hat-checked">
+        <a href="http://stackoverflow.com/users/2985303/scott-barta"><div class="gravatar-wrapper-32"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/03a14cfcfd0ce39ba9704d8a70d857b7.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2985303/scott-barta">Scott Barta</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 54,034" dir="ltr">54k</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="136 silver badges"><span class="badge2"></span><span class="badgecount">136</span></span><span title="129 bronze badges"><span class="badge3"></span><span class="badgecount">129</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-02-11 20:49:38Z" class="relativetime">Feb 11 '14 at 20:49</span>
+    </div>
+    <div class="user-gravatar32 wb-hat-checked">
+        <a href="http://stackoverflow.com/users/3174309/dum4ll3"><div class="gravatar-wrapper-32"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/ebdd76b9f421b5aad8e7636eb96002fd.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3174309/dum4ll3">dum4ll3</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">439</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-21712714" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-32832284" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I think what you want is a 
+aar file (Android archive) that one can be linked quiet simple as 
+dependency. Basically you need to create a Android library project. But I
+ cannot write the exact steps from mind.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/995926/rekire" title="28,988 reputation" class="comment-user">rekire</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment32832284_21712714"><span title="2014-02-11 20:55:55Z" class="relativetime-clean">Feb 11 '14 at 20:55</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-32832353" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I need a .jar file so I can use in any java project. Not only android's.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3174309/dum4ll3" title="439 reputation" class="comment-user owner">dum4ll3</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment32832353_21712714"><span title="2014-02-11 20:58:16Z" class="relativetime-clean">Feb 11 '14 at 20:58</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-32832433" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Must be almost the same - make a library project and the export it.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3229323/thrash-bean" title="409 reputation" class="comment-user">Thrash Bean</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment32832433_21712714"><span title="2014-02-11 21:00:31Z" class="relativetime-clean">Feb 11 '14 at 21:00</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-32833372" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy"><a href="https://code.google.com/p/android/issues/detail?id=58287" rel="nofollow noreferrer">This bug</a> describes a deficiency in the Android gradle plugin that prevents easily hacking the gradle buildfile to add a jar target...</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/448741/mmigdol" title="1,101 reputation" class="comment-user">mmigdol</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment32833372_21712714"><span title="2014-02-11 21:25:46Z" class="relativetime-clean">Feb 11 '14 at 21:25</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-21712714" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								3 Answers
+                                <span style="display:none;" itemprop="answerCount">3</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="21713954"></a>
+<div id="answer-21713954" class="answer" data-answerid="21713954" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="21713954" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">43</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>If you set up the code as a plain Java module in Gradle, then it's 
+really easy to have Gradle give you a jar file with the contents. That 
+jar file will have only your code, not the other Apache libraries it 
+depends on. I'd recommend distributing it this way; it's a little weird 
+to bundle dependencies inside your library, and it's more normal for 
+users of those libraries to have to include those dependencies on their 
+own (because otherwise there are collisions of those projects are 
+already linking copies of the library, perhaps of different versions). 
+What's more, you avoid potential licensing problems around 
+redistributing other people's code if you were to publish your library.</p>
+
+<p>Take the code that also needs to be compiled to a jar, and move it to a separate plain Java module in Android Studio:</p>
+
+<ol>
+<li><b>File</b> menu &gt; <b>New Module...</b> &gt; <b>Java Library</b></li>
+<li>Set up the library, Java package name, and class names in the 
+wizard. (If you don't want it to create a class for you, you can just 
+delete it once the module is created)</li>
+<li>In your Android code, set up a dependency on the new module so it can use the code in your new library:</li>
+<li><b>File</b> &gt; <b>Project Structure</b> &gt; <b>Modules</b> &gt; <i>(your Android Module)</i> &gt; <b> Dependencies</b> &gt; <b>+</b> &gt; <b>Module dependency</b>. See the screenshot below:
+<img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/o1Z87.png" alt="enter image description here"></li>
+<li>Choose your module from the list in the dialog that comes up:
+<img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/vGaxs.png" alt="enter image description here"></li>
+</ol>
+
+<p>Hopefully your project should be building normally now. After you do a
+ build, a jar file for your Java library will be placed in the <b>build/libs</b> directory in your module's directory. If you want to build the jar file by hand, you can run its <b>jar</b> build file task from the Gradle window:
+<img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/5iXWi.png" alt="enter image description here"></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/21713954" title="short permalink to this answer" class="short-link" id="link-post-21713954">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/21713954/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-02-11 21:58:47Z" class="relativetime">Feb 11 '14 at 21:58</span>
+    </div>
+    <div class="user-gravatar32 wb-hat-checked">
+        <a href="http://stackoverflow.com/users/2985303/scott-barta"><div class="gravatar-wrapper-32"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/03a14cfcfd0ce39ba9704d8a70d857b7.png" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2985303/scott-barta">Scott Barta</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 54,034" dir="ltr">54k</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="136 silver badges"><span class="badge2"></span><span class="badgecount">136</span></span><span title="129 bronze badges"><span class="badge3"></span><span class="badgecount">129</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-21713954" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="6" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-32867504" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thank you very much! Your 
+answer was really helpful, most in the last screenshot that shows the 
+Gradle tasks. I didn't know that. I could follow your the steps, but I 
+still missing the org.apache.http.Header.  How can I import it into my 
+lib?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3174309/dum4ll3" title="439 reputation" class="comment-user owner">dum4ll3</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment32867504_21713954"><span title="2014-02-12 16:04:04Z" class="relativetime-clean">Feb 12 '14 at 16:04</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-32868936" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">What do you mean when you say you're missing it?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2985303/scott-barta" title="54,034 reputation" class="comment-user">Scott Barta</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment32868936_21713954"><span title="2014-02-12 16:34:46Z" class="relativetime-clean">Feb 12 '14 at 16:34</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-32872076" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Go through the same Project 
+Structure &gt; dependencies flow, but choose your library module instead
+ of your project, and add the dependency in the same way. In my answer I
+ say that it puts the jar file in the build/libs dir in its module 
+directory.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2985303/scott-barta" title="54,034 reputation" class="comment-user">Scott Barta</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment32872076_21713954"><span title="2014-02-12 17:49:18Z" class="relativetime-clean">Feb 12 '14 at 17:49</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-32877726" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I got: java.lang.NoClassDefFoundError: com.loopj.android.http.RequestParams. That's my external library I'm compiling with mine.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3174309/dum4ll3" title="439 reputation" class="comment-user owner">dum4ll3</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment32877726_21713954"><span title="2014-02-12 20:09:21Z" class="relativetime-clean">Feb 12 '14 at 20:09</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-56822858" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of 'useful comment' votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">It work with java library only, and jar task in android library not exist</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1983018/cuasodayleo" title="155 reputation" class="comment-user">cuasodayleo</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment56822858_21713954"><span title="2015-12-31 02:57:15Z" class="relativetime-clean">Dec 31 '15 at 2:57</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-21713954" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>6</b> more comments</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1788083418",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1788083418"></div>
+  
+<a name="35431416"></a>
+<div id="answer-35431416" class="answer" data-answerid="35431416" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="35431416" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">40</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<ul>
+<li><p>Open build.gradle for library project
+<a href="https://i.stack.imgur.com/cXfMk.png" rel="nofollow noreferrer"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/cXfMk.png" alt="enter image description here"></a></p></li>
+<li><p>Write two tasks in build.gradle -- deleteJar and createJar and add rule createJar.dependsOn(deleteJar, build)
+<a href="https://i.stack.imgur.com/jQ3U1.png" rel="nofollow noreferrer"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/jQ3U1.png" alt="enter image description here"></a></p></li>
+<li><p>Expand gradle panel from right and open all tasks under 
+yourlibrary-&gt;others. You will see two new tasks there -- createJar 
+and deleteJar
+<a href="https://i.stack.imgur.com/YMMFN.png" rel="nofollow noreferrer"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/YMMFN.png" alt="enter image description here"></a></p></li>
+<li><p>Double click on createJar
+<a href="https://i.stack.imgur.com/WJUS4.png" rel="nofollow noreferrer"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/WJUS4.png" alt="enter image description here"></a></p></li>
+<li><p>Once the task run successfully, get your generated jar from path mentioned in createJar task i.e. libs/xxxx.jar
+<a href="https://i.stack.imgur.com/j0wvg.png" rel="nofollow noreferrer"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/j0wvg.png" alt="enter image description here"></a></p></li>
+<li><p>copy past the jar into your required project's lib folder--&gt;right click--&gt;select "add as library"</p></li>
+</ul>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/35431416" title="short permalink to this answer" class="short-link" id="link-post-35431416">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/35431416/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-02-16 11:31:19Z" class="relativetime">Feb 16 at 11:31</span>
+    </div>
+    <div class="user-gravatar32 wb-hat-checked">
+        <a href="http://stackoverflow.com/users/734298/abhinav-tyagi"><div class="gravatar-wrapper-32"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/FxHW5.jpg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/734298/abhinav-tyagi">Abhinav Tyagi</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">883</span><span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span><span title="21 bronze badges"><span class="badge3"></span><span class="badgecount">21</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-35431416" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-63906359" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thank you very much! Your answer is really helpful!!!</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1002958/prathamesh-talathi" title="96 reputation" class="comment-user">Prathamesh Talathi</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment63906359_35431416"><span title="2016-07-07 10:06:11Z" class="relativetime-clean">Jul 7 at 10:06</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-63906441" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">You're welcome. Do up vote the answer 😉</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/734298/abhinav-tyagi" title="883 reputation" class="comment-user">Abhinav Tyagi</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment63906441_35431416"><span title="2016-07-07 10:07:52Z" class="relativetime-clean">Jul 7 at 10:07</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-63981478" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">It's working for me, Thank you !</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2990218/do-xuan-nguyen" title="89 reputation" class="comment-user">Do Xuan Nguyen</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment63981478_35431416"><span title="2016-07-09 11:43:30Z" class="relativetime-clean">Jul 9 at 11:43</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-64380127" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">fantastic man , double upvote for you .</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1367344/adnan9011" title="1,433 reputation" class="comment-user">adnan9011</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment64380127_35431416"><span title="2016-07-20 19:27:52Z" class="relativetime-clean">Jul 20 at 19:27</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-66476102" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Nice! It worked.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2697217/green0range" title="67 reputation" class="comment-user">green0range</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment66476102_35431416"><span title="2016-09-19 22:35:23Z" class="relativetime-clean">Sep 19 at 22:35</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-35431416" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="40814975"></a>
+<div id="answer-40814975" class="answer" data-answerid="40814975" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input name="_id_" value="40814975" type="hidden">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Simply add this to your java module's build.gradle. It will include dependent libraries in archive.</p>
+
+<pre style="" class="lang-java prettyprint prettyprinted"><code><span class="pln">mainClassName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"com.company.application.Main"</span><span class="pln">
+
+jar </span><span class="pun">{</span><span class="pln">
+  manifest </span><span class="pun">{</span><span class="pln"> 
+    attributes </span><span class="str">"Main-Class"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"$mainClassName"</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">  
+
+  from </span><span class="pun">{</span><span class="pln">
+    configurations</span><span class="pun">.</span><span class="pln">compile</span><span class="pun">.</span><span class="pln">collect </span><span class="pun">{</span><span class="pln"> it</span><span class="pun">.</span><span class="pln">isDirectory</span><span class="pun">()</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> it </span><span class="pun">:</span><span class="pln"> zipTree</span><span class="pun">(</span><span class="pln">it</span><span class="pun">)</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>This will result in [module_name]/build/libs/[module_name].jar file.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/40814975" title="short permalink to this answer" class="short-link" id="link-post-40814975">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/40814975/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-11-26 04:41:22Z" class="relativetime">Nov 26 at 4:41</span>
+    </div>
+    <div class="user-gravatar32 wb-hat-checked">
+        <a href="http://stackoverflow.com/users/301132/bao-le"><div class="gravatar-wrapper-32"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/cb705ae59b0e93bd790c0a4f8060cc50.jpeg" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/301132/bao-le">Bao Le</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">4,640</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="37 silver badges"><span class="badge2"></span><span class="badgecount">37</span></span><span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-40814975" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-40814975" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="/questions/21712714/answer/submit" method="post" class="post-form">
+						    <input id="post-id" value="21712714" type="hidden">
+                            <input id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" type="hidden">
+                            <input name="referrer" value="https://www.google.com" type="hidden">
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li style="left: 0px;" class="wmd-button" id="wmd-bold-button"><span style="background-position: 0px -20px;"></span></li><li style="left: 25px;" class="wmd-button" id="wmd-italic-button"><span style="background-position: -20px -20px;"></span></li><li style="left: 50px;" class="wmd-spacer" id="wmd-spacer1"><span style="background-position: -40px -20px;"></span></li><li style="left: 75px;" class="wmd-button" id="wmd-link-button"><span style="background-position: -40px -20px;"></span></li><li style="left: 100px;" class="wmd-button" id="wmd-quote-button"><span style="background-position: -60px -20px;"></span></li><li style="left: 125px;" class="wmd-button" id="wmd-code-button"><span style="background-position: -80px -20px;"></span></li><li style="left: 150px;" class="wmd-button" id="wmd-image-button"><span style="background-position: -100px -20px;"></span></li><li style="left: 175px;" class="wmd-spacer" id="wmd-spacer2"><span style="background-position: -120px -20px;"></span></li><li style="left: 200px;" class="wmd-button" id="wmd-olist-button"><span style="background-position: -120px -20px;"></span></li><li style="left: 225px;" class="wmd-button" id="wmd-ulist-button"><span style="background-position: -140px -20px;"></span></li><li style="left: 250px;" class="wmd-button" id="wmd-heading-button"><span style="background-position: -160px -20px;"></span></li><li style="left: 275px;" class="wmd-button" id="wmd-hr-button"><span style="background-position: -180px -20px;"></span></li><li style="left: 300px;" class="wmd-spacer" id="wmd-spacer3"><span style="background-position: -200px -20px;"></span></li><li style="left: 325px;" class="wmd-button" id="wmd-undo-button"><span style="background-position: -200px -20px;"></span></li><li style="left: 350px;" class="wmd-button" id="wmd-redo-button"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" value="e298dfa870940e69c7aacb2943640963" type="hidden">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f21712714%2fhow-to-make-a-jar-out-from-an-android-studio-project%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input name="manual-openid" class="manual-openid" type="hidden">
+                    <input name="use-facebook" class="use-facebook" value="false" type="hidden">
+                    <input name="use-google" class="use-google" value="false" type="hidden">
+                    <input class="submit-openid" value="Submit" style="display:none" type="button">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" size="30" maxlength="30" tabindex="105" type="text">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" size="30" maxlength="100" tabindex="106" placeholder="required, but never shown" type="email">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fstackoverflow.com%2fquestions%2f21712714%2fhow-to-make-a-jar-out-from-an-android-studio-project%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" value="Post Your Answer" tabindex="110" type="submit">
+									<a href="#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input name="legalLinksShown" value="1" type="hidden">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag" title="show questions tagged 'java'" rel="tag">java</a> <a href="http://stackoverflow.com/questions/tagged/android" class="post-tag" title="show questions tagged 'android'" rel="tag"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/tKsDb.png" alt="" class="sponsor-tag-img" height="16" width="18">android</a> <a href="http://stackoverflow.com/questions/tagged/jar" class="post-tag" title="show questions tagged 'jar'" rel="tag">jar</a> <a href="http://stackoverflow.com/questions/tagged/android-studio" class="post-tag" title="show questions tagged 'android-studio'" rel="tag"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/xqoqk.png" alt="" class="sponsor-tag-img" height="16" width="18">android-studio</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2014-02-11 20:49:38Z"><b>2 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>58801 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/21712714/how-to-make-a-jar-out-from-an-android-studio-project?lastactivity" class="lastactivity-link" title="2016-11-26 04:41:22Z">25 days ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+			<div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Blog
+                </div>
+                <hr>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="http://stackoverflow.blog/2016/12/Stack-Overflow-Gives-Back-2016/?cb=1" class="question-hyperlink">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="http://stackoverflow.blog/2016/12/Stack-Overflow-Gives-Back-2016/?cb=1" class="question-hyperlink">Stack Overflow Gives Back 2016</a>
+                </div>
+                <br class="cbt">
+            </div>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="http://stackoverflow.blog/2016/12/Developers-webmasters-and-ninjas-whats-in-a-job-title/?cb=1" class="question-hyperlink">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="http://stackoverflow.blog/2016/12/Developers-webmasters-and-ninjas-whats-in-a-job-title/?cb=1" class="question-hyperlink">Developers, Webmasters, and Ninjas: What’s in a Job Title?</a>
+                </div>
+                <br class="cbt">
+            </div>
+    </div>
+</div>			
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1925178876",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1925178876"></div>
+            <div id="hireme"></div>
+        <script>
+window.clcfl_request = 'Am1JBN4YKtQIAAAAAEpPSwECAAAAAgAAAAAhAAAAfGphdmF8YW5kcm9pZHxqYXJ8YW5kcm9pZC1zdHVkaW98APAVCqbssp0vpl8';
+;(function(n){var t,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(n.allowed[0]!=="*"&&n.allowed.indexOf(location.hostname)===-1)return;t=window;t.clcfl=t.clcfl||{};t.clcfl_request||void 0;t.clcfl.init=t.clcfl.init||[];t.clcfl.init.push(function(n){return n.load()});t.clcfl.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(r){}}).call(null, {"azw":true,"kt":2000,"autoload":true,"tto":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","blog.codinghorror.com","talent.stackoverflow.com"],"h":"clc.stackoverflow.com","u":"//clc.stackoverflow.com/markup.js","lib":"//cdn.sstatic.net/clc/fl/clc.min.js?v=b8e6573f5bdc"});        </script>
+			<div class="module" id="chat-feature">
+
+    <h4><a title="41 users active in 28 rooms the last 60 minutes" href="http://chat.stackoverflow.com/" id="h-chat-link">41 People Chatting</a></h4>
+    <div class="related" id="ad502-rooms"><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="JavaScript"><a href="http://chat.stackoverflow.com/rooms/17">JavaScript</a></span></h3><span title="2016-12-22 01:20:47Z" class="ad502-last-message">1 hour ago - <a href="http://chat.stackoverflow.com/users/44041">Filip Dupanović</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/44041"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/ef09ee2a5aaee27f3630e1842f30fbac.jpeg" title="Filip Dupanović: 1 hour ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/345257"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/j05a6.png" title="Mosho: 1 hour ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/5638869"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/qEJus.jpg" title="neoDev: 2 hours ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/203093"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/63c675da2f684ec9c8286a134f2eec87.png" title="hsimah: 2 hours ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/1947276"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/F8tJi.jpg" title="little pootis: 2 hours ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/423491"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/998e7a4ffb7d648a4832787d60fd62a3.jpeg" title="david: 2 hours ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/2125913"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/vn9G9.png" title="Meredith: 2 hours ago" height="23" width="23"></a></div></div><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="SO Close Vote Reviewers"><a href="http://chat.stackoverflow.com/rooms/41570">SO Close Vote Reviewers</a></span></h3><span title="2016-12-22 01:56:21Z" class="ad502-last-message">1 hour ago - <a href="http://chat.stackoverflow.com/users/1402846">Pang</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/3671802"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/pLGbG.png" title="FOX 9000: 1 hour ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/499214"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/PObJM.png" title="Jan Dvorak: 1 hour ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/6820627"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/w6jRk.jpg" title="Learn How To Be Transparent: 1 hour ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/3155639"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/d254eedd932f950213109aa3706aba74.png" title="Alexander O'Mara: 1 hour ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/7016303"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/f2830521d56d561ab8b5579376796c5e.png" title="Mikel F: 1 hour ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/5285668"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/OFCkz.png" title="Yam: 2 hours ago" height="23" width="23"></a><a href="http://chat.stackoverflow.com/users/3735529"><img src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/m9xyh.jpg" title="SmokeDetector: 2 hours ago" height="23" width="23"></a></div></div></div>
+    <script>
+    // <!--
+        StackExchange.ready(
+        function () {
+            var options = {
+                chatUrl: 'http://chat.stackoverflow.com',
+                reloadUrl: '/api/recent-chat',
+                preloadData: {"activeUsers":41,"activeRooms":28,"rooms":[{"name":"JavaScript","id":17,"lastPost":1482369647,"posts":3741693,"users":[{"name":"Filip Dupanović","id":44041,"emailhash":"ef09ee2a5aaee27f3630e1842f30fbac","lastPost":1482369646},{"name":"Mosho","id":345257,"emailhash":"!https://i.stack.imgur.com/j05a6.png?s=128\u0026g=1","lastPost":1482369449},{"name":"neoDev","id":5638869,"emailhash":"!https://i.stack.imgur.com/qEJus.jpg?s=128\u0026g=1","lastPost":1482368818},{"name":"hsimah","id":203093,"emailhash":"63c675da2f684ec9c8286a134f2eec87","lastPost":1482368381},{"name":"little pootis","id":1947276,"emailhash":"!https://i.stack.imgur.com/F8tJi.jpg?s=128\u0026g=1","lastPost":1482366755},{"name":"david","id":423491,"emailhash":"998e7a4ffb7d648a4832787d60fd62a3","lastPost":1482365912},{"name":"Meredith","id":2125913,"emailhash":"!https://i.stack.imgur.com/vn9G9.png?s=128\u0026g=1","lastPost":1482365879}],"messages":[{"date":1482369647,"user":"Filip Dupanović","userid":44041}],"singleImage":false,"tags":["ecmascript","ecmascript-6","javascript","nodejs","typescript"]},{"name":"SO Close Vote Reviewers","id":41570,"lastPost":1482371781,"posts":621113,"users":[{"name":"FOX 9000","id":3671802,"emailhash":"!https://i.stack.imgur.com/pLGbG.png?s=128\u0026g=1","lastPost":1482371747},{"name":"Jan Dvorak","id":499214,"emailhash":"!https://i.stack.imgur.com/PObJM.png?s=128\u0026g=1","lastPost":1482371690},{"name":"Learn How To Be Transparent","id":6820627,"emailhash":"!https://i.stack.imgur.com/w6jRk.jpg?s=128\u0026g=1","lastPost":1482371596},{"name":"Alexander O\u0027Mara","id":3155639,"emailhash":"d254eedd932f950213109aa3706aba74","lastPost":1482371593},{"name":"Mikel F","id":7016303,"emailhash":"f2830521d56d561ab8b5579376796c5e","lastPost":1482369423},{"name":"Yam","id":5285668,"emailhash":"!https://i.stack.imgur.com/OFCkz.png?s=128\u0026g=1","lastPost":1482368939},{"name":"SmokeDetector","id":3735529,"emailhash":"!https://i.stack.imgur.com/m9xyh.jpg?s=128\u0026g=1","lastPost":1482367752}],"messages":[{"date":1482371781,"user":"Pang","userid":1402846}],"singleImage":false,"tags":["discussion","moderation","review"]}]} 
+            };
+
+            StackExchange.chatAd.init(options);
+        });
+    // -->
+    </script>
+
+</div>
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/30838975?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/30838975/how-to-create-a-jar-in-android-studio?noredirect=1&amp;lq=1" class="question-hyperlink">how to create a jar in android studio?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/32373117?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">16</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/32373117/error-while-creating-own-jar-library-for-android-project?noredirect=1&amp;lq=1" class="question-hyperlink">Error while creating own jar library for Android project</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/30781918?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">7</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/30781918/how-to-create-a-jar-file-from-android-studio?noredirect=1&amp;lq=1" class="question-hyperlink">how to create a jar file from android studio</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/28713963?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">3</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/28713963/generating-jar-file-in-android-studio?noredirect=1&amp;lq=1" class="question-hyperlink">Generating Jar file in Android Studio</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/27918505?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/27918505/how-to-create-a-jar-library-not-aar-in-android-studio?noredirect=1&amp;lq=1" class="question-hyperlink">How to create a jar library (not aar) in android studio?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/28305533?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/28305533/how-to-call-android-framework-function-in-module-project?noredirect=1&amp;lq=1" class="question-hyperlink">how to call android framework function in module project</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/36001814?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/36001814/android-studio-make-jar-file-with-dependencies?noredirect=1&amp;lq=1" class="question-hyperlink">Android studio make jar file with dependencies</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/37918336?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/37918336/generate-jar-in-android-studio-2-1-2?noredirect=1&amp;lq=1" class="question-hyperlink">Generate jar in Android Studio 2.1.2</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/32054741?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/32054741/creating-a-jar-file-and-using-it-in-android-studio?noredirect=1&amp;lq=1" class="question-hyperlink">Creating a JAR file and using it in Android Studio</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/37694183?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/37694183/android-create-library-that-contains-other-libraries?noredirect=1&amp;lq=1" class="question-hyperlink">Android create library that contains other libraries</a>
+</div>					<div class="spacer more">
+				<a href="http://stackoverflow.com/questions/linked/21712714?lq=1">see more linked questions…</a>
+			</div>
+	</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/16588064?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">618</div></a><a href="http://stackoverflow.com/questions/16588064/how-do-i-add-a-library-project-to-android-studio?rq=1" class="question-hyperlink">How do I add a library project to Android Studio?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/16608135?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">708</div></a><a href="http://stackoverflow.com/questions/16608135/android-studio-add-jar-as-library?rq=1" class="question-hyperlink">Android Studio: Add jar as library?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/18302603?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">819</div></a><a href="http://stackoverflow.com/questions/18302603/where-to-place-assets-folder-in-android-studio?rq=1" class="question-hyperlink">Where to place Assets folder in Android Studio</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/25375104?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/25375104/how-to-make-jar-file-from-custom-java-class-in-android-studio-for-use-other-pro?rq=1" class="question-hyperlink">How to make .jar file from custom java class in android-studio for use other project</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/26713187?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">2</div></a><a href="http://stackoverflow.com/questions/26713187/make-a-jar-lib-from-an-android-library-module?rq=1" class="question-hyperlink">Make a JAR lib from an Android library module</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/27076391?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/27076391/android-studio-using-jars?rq=1" class="question-hyperlink">Android Studio using jars</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/29646243?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">5</div></a><a href="http://stackoverflow.com/questions/29646243/why-does-android-studio-dont-recognize-jar-library-imports?rq=1" class="question-hyperlink">Why does Android Studio don't recognize .jar library imports?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/31139150?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/31139150/android-how-to-create-library-jar-containing-altbeacon-library-with-android-st?rq=1" class="question-hyperlink">Android how to create library (jar) containing Altbeacon library with Android studio and gradle</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/32039446?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/32039446/how-can-i-make-a-global-jar-library-accessible-by-every-project-i-make-in-andr?rq=1" class="question-hyperlink">How can I make a 'global JAR library' accessible by every project I make in Android Studio</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/38350366?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/38350366/error-java-lang-noclassdeffounderror-com-common-builder-running-jar-but-not-i?rq=1" class="question-hyperlink">Error java.lang.NoClassDefFoundError: com/common/Builder, running jar, but not inside Android Studio</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="http://politics.stackexchange.com/questions/14069/why-is-first-past-the-post-used-in-so-many-countries" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is First past the post used in so many countries?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/103822/output-the-sign" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Output the sign
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-photo" title="Photography Stack Exchange"></div><a href="http://photo.stackexchange.com/questions/85526/what-is-the-difference-between-perspective-distortion-and-barrel-or-pincushion-d" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:61 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the difference between perspective distortion and barrel or pincushion distortion?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-history" title="History Stack Exchange"></div><a href="http://history.stackexchange.com/questions/34413/if-the-ch-in-dynasty-was-so-short-lived-why-was-china-named-for-it" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:324 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    If the Ch’in dynasty was so short-lived, why was China named for it?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="http://skeptics.stackexchange.com/questions/36330/did-donald-trump-say-that-global-warming-was-a-hoax-invented-by-the-chinese" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Did Donald Trump say that "global warming was a hoax invented by the Chinese"?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/331837/how-to-make-a-shell-read-the-whole-script-before-executing-it" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to make a shell read the whole script before executing it?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/331611/do-progress-reports-logging-information-belong-on-stderr-or-stdout" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Do progress reports/logging information belong on stderr or stdout?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/65500/would-society-of-simultaneous-hermaphrodites-have-gender-roles" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Would society of simultaneous hermaphrodites have gender roles?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/46988/i-have-forgotten-what-the-puzzle-was" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I have forgotten what the puzzle was
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/300046/explain-it-to-me-like-im-a-physics-grad-global-warming" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Explain it to me like I'm a physics grad: Global Warming
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2067233/is-it-possible-to-have-3-real-numbers-that-have-both-their-sum-and-product-equal" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it possible to have 3 real numbers that have both their sum and product equal to 1?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="http://music.stackexchange.com/questions/51337/in-4-4-time-can-i-insert-a-half-sized-bar-in-the-middle-of-the-piece" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    In 4/4 time can I insert a half sized bar in the middle of the piece?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/276254/what-are-these-boxes-mounted-inline-on-each-of-the-3-phase-wires-of-a-high-volta" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are these boxes mounted inline on each of the 3 phase wires of a high voltage power line in Miami?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="http://music.stackexchange.com/questions/51343/does-hearing-fatigue" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does hearing fatigue?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-japanese" title="Japanese Language Stack Exchange"></div><a href="http://japanese.stackexchange.com/questions/41871/using-polite-form-for-neutral-subjects" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:257 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Using polite form for neutral subjects
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/65368/why-did-vader-dislike-krennic" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why did Vader dislike Krennic?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/364426/an-idiom-or-phrase-for-when-youre-about-to-be-ill" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    An idiom or phrase for when you're about to be ill
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-judaism" title="Mi Yodeya"></div><a href="http://judaism.stackexchange.com/questions/78381/what-is-the-proper-translation-of-breishit-gen-4016" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:248 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the proper translation of Breishit (Gen.) 40:16?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-stats" title="Cross Validated"></div><a href="http://stats.stackexchange.com/questions/252577/bayes-regression-how-is-it-done-in-comparison-to-standard-regression" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:65 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Bayes regression: how is it done in comparison to standard regression?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/148054/has-darth-vader-ever-been-exposed-to-the-vacuum-of-space" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Has Darth Vader ever been exposed to the vacuum of space?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-crypto" title="Cryptography Stack Exchange"></div><a href="http://crypto.stackexchange.com/questions/42463/what-encryption-should-i-use-blowfish-twofish-or-threefish" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:281 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What encryption should I use: Blowfish, Twofish, or Threefish?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-outdoors" title="The Great Outdoors Stack Exchange"></div><a href="http://outdoors.stackexchange.com/questions/14640/when-hiking-why-is-the-right-of-way-given-to-people-going-up" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:395 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    When hiking, why is the right of way given to people going up?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-woodworking" title="Woodworking Stack Exchange"></div><a href="http://woodworking.stackexchange.com/questions/5157/is-marine-grade-plywood-the-same-as-baltic-birch-plywood" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:603 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is Marine Grade Plywood the same as Baltic Birch Plywood?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/73849/bought-agency-bond-fannie-mae-0-04-08-2027-now-what" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Bought agency bond (FANNIE MAE 0% 04/08/2027), now what?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/21712714" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/21712714/ivc/3a39');});
+</script>
+<noscript>
+    <div><img src="/posts/21712714/ivc/3a39" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang">lang-java</div></div>
+
+
+        </div>
+    </div><script src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/clc.js" async=""></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://stackoverflow.blog/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="https://www.stackoverflowbusiness.com/advertise">advertising info</a>
+
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="4">
+                Technology
+            </th>
+            <th colspan="2">
+                Life / Arts
+            </th>
+            <th colspan="2">
+                Culture / Recreation
+            </th>
+            <th colspan="2">
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://softwareengineering.stackexchange.com/" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="http://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="http://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="http://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="http://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="http://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="http://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="http://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="http://mechanics.stackexchange.com/" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="http://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://philosophy.stackexchange.com/" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.12.22.1
+            </div>
+                </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('java,android,jar,android-studio');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            
+                ga('create', 'UA-5620270-1');
+                
+        ga('create', 'UA-5620270-59', 'auto', 'pageData');
+        
+                ga('set', 'dimension2', '|java|android|jar|android-studio|');                     ga('pageData.set', 'dimension2', '|java|android|jar|android-studio|');             ga('send', 'pageview');
+                ga('pageData.send', 'pageview');
+
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+<img style="display: none;" src="java%20-%20How%20to%20make%20a%20.jar%20out%20from%20an%20Android%20Studio%20project%20-%20Stack%20Overflow_files/timeout.gif"></body></html>
