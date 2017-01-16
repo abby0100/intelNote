@@ -1,0 +1,6 @@
+
+[1] android library service
+
+	http://stackoverflow.com/questions/5394121/android-service-in-library
+
+

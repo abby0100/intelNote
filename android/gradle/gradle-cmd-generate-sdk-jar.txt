@@ -1,0 +1,18 @@
+
+
+[2] ./gradlew makeJar
+
+	Could not resolve com.android.tools.build:gradle:1.5.0.
+	http://blog.csdn.net/myemail_sl/article/details/51181707
+
+	主动修改 xx\platforms\android 目录 和 xx\platforms\android\CordovaLib 目录下的 build.gradle
+	把 mavenCentral() 改成 
+	jcenter {
+		url "http://jcenter.bintray.com/"
+	}
+
+[1] Android Studio 将引用第三方jar包的android工程打包成jar包 
+	
+	http://blog.csdn.net/u013183608/article/details/52456375
+
+

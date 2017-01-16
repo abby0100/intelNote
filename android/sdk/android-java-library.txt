@@ -1,0 +1,6 @@
+
+[1] create libraries for android application tutorial
+
+	[gooood] android and java library
+	http://www.vogella.com/tutorials/AndroidLibraryProjects/article.html
+
