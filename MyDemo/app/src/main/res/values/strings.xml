@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MyDemo</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!--jni-->
+    <string name="app_jni_demo">jni demo</string>
+    <string name="app_jni_name">MyJniDemo</string>
+
+    <!--sqlite-->
+    <string name="app_sqlite_demo">sqlite demo</string>
+    <string name="app_sqlite_name">MySqliteDemo</string>
+
+    <!--task list-->
+    <string name="app_task_list_demo">task list demo</string>
+    <string name="app_task_list_name">MyTaskListDemo</string>
+
+</resources>
